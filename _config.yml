@@ -1,0 +1,13 @@
+title: Pricing Strategy Handbook
+description: A bilingual (Korean/English) handbook connecting pricing strategy and the Pricing Harness execution engine.
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+  - jekyll-readme-index
+relative_links:
+  enabled: true
+  collections: true
+readme_index:
+  with_frontmatter: true
+include:
+  - README.md
