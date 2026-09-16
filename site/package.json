@@ -1,0 +1,19 @@
+{
+  "name": "pricing-handbook-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sync-content": "node ./scripts/sync-content.mjs",
+    "predev": "npm run sync-content",
+    "dev": "astro dev",
+    "prebuild": "npm run sync-content",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.30.4",
+    "astro": "^5.1.0"
+  }
+}
