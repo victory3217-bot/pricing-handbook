@@ -12,11 +12,29 @@
 
 ## 3-Part 구조
 
-| Part | Chapter | 주제 |
-|---|---|---|
-| Part I — Pricing Strategy | [CH01](chapters/CH01.md)–[CH06](chapters/CH06.md) | 가격은 비즈니스모델의 결과, 원가, 가치/경쟁 기반 가격결정, 채널·고객관계, 수익모델·가격메커니즘, 재무 렌즈 |
-| Part II — Feasibility Bridge | [CH07](chapters/CH07.md)–[CH09](chapters/CH09.md) | 유효시장, 정성→정량 전환과 P×Qty, QCD·추정손익·반복검증 |
-| Part III — Pricing Harness | [CH10](chapters/CH10.md)–[CH15](chapters/CH15.md) | MODE A/B/C, BEP, Scenario Compare, 가격가설의 검증과 의사결정 |
+### Part I — Pricing Strategy
+
+- [CH01. 가격은 비즈니스모델의 결과다](chapters/CH01.md)
+- [CH02. 원가와 비용구조](chapters/CH02.md)
+- [CH03. 가격결정의 두 논리 — 고객가치와 경쟁](chapters/CH03.md)
+- [CH04. 채널과 고객관계가 바꾸는 가격구조](chapters/CH04.md)
+- [CH05. 수익원과 가격 메커니즘](chapters/CH05.md)
+- [CH06. 세 재무 렌즈와 사업타당성으로의 연결](chapters/CH06.md)
+
+### Part II — Feasibility Bridge
+
+- [CH07. 유효시장과 나의 시장](chapters/CH07.md)
+- [CH08. 정성에서 정량으로 — 유효시장 추정과 P×Qty](chapters/CH08.md)
+- [CH09. QCD·추정손익 해석과 반복검증](chapters/CH09.md)
+
+### Part III — Pricing Harness
+
+- [CH10. MODE A — 현재가격 진단](chapters/CH10.md)
+- [CH11. MODE B — 목표가격 역산](chapters/CH11.md)
+- [CH12. MODE C — 허용원가 역산](chapters/CH12.md)
+- [CH13. BEP — 손익분기점](chapters/CH13.md)
+- [CH14. Scenario Compare — 시나리오 비교](chapters/CH14.md)
+- [CH15. 가격가설의 검증과 의사결정](chapters/CH15.md)
 
 ## Worksheet / Example
 

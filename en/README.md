@@ -12,11 +12,29 @@ Founders, consultants, and business planners who want to learn pricing strategy 
 
 ## 3-Part Structure
 
-| Part | Chapters | Topics |
-|---|---|---|
-| Part I — Pricing Strategy | [CH01](chapters/CH01.md)–[CH06](chapters/CH06.md) | Price as the outcome of a business model, cost, value/competition-based pricing, channel and customer relationship, revenue model and pricing mechanism, financial lenses |
-| Part II — Feasibility Bridge | [CH07](chapters/CH07.md)–[CH09](chapters/CH09.md) | Effective Market, the qualitative-to-quantitative shift and P×Qty, QCD, Projected P&L, and iterative validation |
-| Part III — Pricing Harness | [CH10](chapters/CH10.md)–[CH15](chapters/CH15.md) | MODE A/B/C, BEP, Scenario Compare, and validating the pricing hypothesis |
+### Part I — Pricing Strategy
+
+- [CH01. Price Is the Outcome of the Business Model](chapters/CH01.md)
+- [CH02. Cost and Cost Structure](chapters/CH02.md)
+- [CH03. Two Logics of Pricing — Customer Value and Competition](chapters/CH03.md)
+- [CH04. How Channel and Customer Relationship Reshape Price Structure](chapters/CH04.md)
+- [CH05. Revenue Streams and Pricing Mechanisms](chapters/CH05.md)
+- [CH06. The Three Financial Lenses and the Bridge to Business Feasibility](chapters/CH06.md)
+
+### Part II — Feasibility Bridge
+
+- [CH07. The Effective Market and My Market](chapters/CH07.md)
+- [CH08. From Qualitative to Quantitative — Effective Market Sizing and P×Qty](chapters/CH08.md)
+- [CH09. Interpreting QCD and Projected P&L, and Iterative Validation](chapters/CH09.md)
+
+### Part III — Pricing Harness
+
+- [CH10. MODE A — Current Price Diagnosis](chapters/CH10.md)
+- [CH11. MODE B — Target Price Reverse Calculation](chapters/CH11.md)
+- [CH12. MODE C — Allowable Cost Reverse Calculation](chapters/CH12.md)
+- [CH13. BEP — Break-Even Point](chapters/CH13.md)
+- [CH14. Scenario Compare](chapters/CH14.md)
+- [CH15. Validating Price Hypotheses and Making Decisions](chapters/CH15.md)
 
 ## Worksheets / Examples
 
