@@ -130,30 +130,66 @@ for (const locale of LOCALES) {
   }
 }
 
-// Locale landing pages (index) — short, generated, no operational/internal info.
+// Locale landing pages (index) — generated from the same H1s used for the
+// sidebar, so every chapter is an individually clickable link directly in
+// the landing body (not just in the sidebar). Mirrors the pattern already
+// live on business-planning-handbook: a plain "doc" page (no `template:
+// splash`, which would hide the left sidebar/mobile menu), with the full
+// chapter list as the actual page content.
+function chapterLinkList(locale) {
+  const lines = [];
+  for (const part of PARTS) {
+    const heading = PART_HEADINGS[part.dir][locale];
+    lines.push(`### ${heading}`, "");
+    for (const ch of part.chapters) {
+      const raw = readSource(locale, "chapters", `${ch}.md`);
+      const { title } = extractTitle(raw, ch);
+      lines.push(`- [${title}](chapters/${part.dir}/${ch.toLowerCase()}/)`);
+    }
+    lines.push("");
+  }
+  return lines.join("\n");
+}
+
+const PART_HEADINGS = {
+  "part-1": { ko: "Part I — 가격전략", en: "Part I — Pricing Strategy" },
+  "part-2": { ko: "Part II — 사업타당성 연결", en: "Part II — Feasibility Bridge" },
+  "part-3": { ko: "Part III — Pricing Harness", en: "Part III — Pricing Harness" },
+};
+
 const LANDING = {
   ko: {
     title: "Pricing Strategy Handbook",
-    body: `가격전략과 Pricing Harness 실행 도구를 하나로 결합한 15개 Chapter 핸드북입니다.\n\n- 3 Part\n- 15개 챕터 (Chapters)\n- 15개 워크시트 (Worksheets)\n- 12개 근거 기반 사례 (Examples)\n\n왼쪽 사이드바에서 CH01부터 시작하세요.\n`,
+    intro: `가격전략과 Pricing Harness 실행 도구를 하나로 결합한 15개 Chapter 핸드북입니다. 15개 챕터 · 15개 워크시트 · 12개 근거 기반 사례로 구성되어 있습니다.`,
+    footerNote: `각 챕터별 실습 워크시트와 사례는 왼쪽 사이드바의 **워크시트 & 사례** 그룹에서 확인할 수 있습니다.`,
+    startLink: (firstSlug) => `[CH01부터 시작하기 →](${firstSlug})`,
   },
   en: {
     title: "Pricing Strategy Handbook",
-    body: `A 15-chapter handbook connecting pricing strategy with the Pricing Harness execution engine.\n\n- 3 Parts\n- 15 Chapters\n- 15 Worksheets\n- 12 Source-backed Examples\n\nStart with CH01 in the sidebar on the left.\n`,
+    intro: `A 15-chapter handbook connecting pricing strategy with the Pricing Harness execution engine. 15 Chapters · 15 Worksheets · 12 Source-backed Examples.`,
+    footerNote: `Each chapter's worksheet and examples are available in the **Worksheets & Examples** sidebar group.`,
+    startLink: (firstSlug) => `[Start with CH01 →](${firstSlug})`,
   },
 };
 
 for (const locale of LOCALES) {
-  writeGenerated(
-    join(OUT_ROOT, locale, "index.md"),
-    { title: LANDING[locale].title, template: "splash" },
-    LANDING[locale].body
-  );
+  const firstSlug = `chapters/${PARTS[0].dir}/${PARTS[0].chapters[0].toLowerCase()}/`;
+  const body = [
+    LANDING[locale].intro,
+    "",
+    chapterLinkList(locale),
+    LANDING[locale].footerNote,
+    "",
+    LANDING[locale].startLink(firstSlug),
+    "",
+  ].join("\n");
+  writeGenerated(join(OUT_ROOT, locale, "index.md"), { title: LANDING[locale].title }, body);
 }
 
 // Root landing page: bilingual choice, no internal/operational info.
 writeGenerated(
   join(OUT_ROOT, "index.md"),
-  { title: "Pricing Strategy Handbook", template: "splash" },
+  { title: "Pricing Strategy Handbook" },
   `Pricing Strategy Handbook — v0.1.0\n\n3 Parts · 15 Chapters · 15 Worksheets · 12 Source-backed Examples\n\n- [한국어](/pricing-handbook/ko/)\n- [English](/pricing-handbook/en/)\n`
 );
 
