@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 600" role="img" aria-labelledby="t d">
+  <title id="t">What reshapes price structure</title>
+  <desc id="d">Target customer, channel, Customer Relationship Cost, and cost with target margin come together in the price structure, which is checked for whether the target margin still holds.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; fill: #0f172a; }
+    .h { font-size: 19px; font-weight: 700; }
+    .s { font-size: 15px; fill: #334155; }
+    .p { font-size: 22px; font-weight: 700; fill: #6366f1; text-anchor: middle; }
+    .box { fill: #eef2ff; stroke: #6366f1; stroke-width: 1.5; }
+    .out { fill: #fef3c7; stroke: #d97706; stroke-width: 2; }
+  </style>
+  <rect width="440" height="600" rx="12" fill="#ffffff"/>
+  <rect class="box" x="20" y="20" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="50">Target customer</text>
+  <text class="s" x="38" y="76">A given price assumes a particular customer</text>
+  <text class="p" x="220" y="116">+</text>
+  <rect class="box" x="20" y="132" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="162">Channel (direct vs. indirect)</text>
+  <text class="s" x="38" y="188">Fees · distribution margin · operating burden</text>
+  <text class="p" x="220" y="228">+</text>
+  <rect class="box" x="20" y="244" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="274">Customer Relationship Cost</text>
+  <text class="s" x="38" y="300">Acquisition · retention · repurchase</text>
+  <text class="p" x="220" y="340">+</text>
+  <rect class="box" x="20" y="356" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="386">Cost and target margin</text>
+  <text class="s" x="38" y="412">The base elements of price structure</text>
+  <path d="M220 432 V470" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <rect class="out" x="20" y="474" width="400" height="104" rx="10"/>
+  <text class="h" x="38" y="506">Price structure</text>
+  <text class="s" x="38" y="532">Does the target margin still hold after all of it?</text>
+  <text class="s" x="38" y="558" style="fill:#92400e">If not: adjust channel, price, or relationship</text>
+</svg>

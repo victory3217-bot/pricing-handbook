@@ -4,7 +4,7 @@
 // Do NOT hand-edit files under src/content/docs — edit the source in ../ko or ../en instead.
 // This script only adds/normalizes Starlight frontmatter; it never touches prose.
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync, copyFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -69,7 +69,28 @@ function yamlLine(key, value, indent) {
   return `${pad}${key}: ${yamlEscape(String(value))}`;
 }
 
+// Images live in <repo>/assets/images and are referenced from the source
+// Markdown by relative path (so they also render on GitHub). For the Reader
+// they are copied to public/images and the links are rewritten to include
+// the site base path.
+const BASE = "/pricing-handbook/";
+const IMAGES_SRC = join(REPO_ROOT, "assets", "images");
+const IMAGES_OUT = join(SITE_ROOT, "public", "images");
+
+if (existsSync(IMAGES_OUT)) rmSync(IMAGES_OUT, { recursive: true, force: true });
+if (existsSync(IMAGES_SRC)) {
+  mkdirSync(IMAGES_OUT, { recursive: true });
+  for (const f of readdirSync(IMAGES_SRC)) {
+    copyFileSync(join(IMAGES_SRC, f), join(IMAGES_OUT, f));
+  }
+}
+
+function rewriteAssetLinks(body) {
+  return body.replace(/\]\((?:\.\.\/)+assets\/images\//g, `](${BASE}images/`);
+}
+
 function writeGenerated(outPath, frontmatter, body) {
+  body = rewriteAssetLinks(body);
   mkdirSync(dirname(outPath), { recursive: true });
   const fmLines = Object.entries(frontmatter)
     .map(([k, v]) => yamlLine(k, v, 0))

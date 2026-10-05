@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 600" role="img" aria-labelledby="t d">
+  <title id="t">가격구조를 바꾸는 요소</title>
+  <desc id="d">목표 고객, 채널, 고객관계 비용, 원가와 목표 마진이 함께 가격구조로 모이고, 모두 반영한 뒤에도 목표 마진이 남는지 검토한다.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif; fill: #0f172a; }
+    .h { font-size: 19px; font-weight: 700; }
+    .s { font-size: 15px; fill: #334155; }
+    .p { font-size: 22px; font-weight: 700; fill: #6366f1; text-anchor: middle; }
+    .box { fill: #eef2ff; stroke: #6366f1; stroke-width: 1.5; }
+    .out { fill: #fef3c7; stroke: #d97706; stroke-width: 2; }
+  </style>
+  <rect width="440" height="600" rx="12" fill="#ffffff"/>
+  <rect class="box" x="20" y="20" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="50">목표 고객</text>
+  <text class="s" x="38" y="76">특정 가격은 특정 고객을 전제로 한다</text>
+  <text class="p" x="220" y="116">+</text>
+  <rect class="box" x="20" y="132" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="162">채널 (직접 vs 간접)</text>
+  <text class="s" x="38" y="188">수수료 · 유통마진 · 운영부담</text>
+  <text class="p" x="220" y="228">+</text>
+  <rect class="box" x="20" y="244" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="274">고객관계 비용</text>
+  <text class="s" x="38" y="300">획득 · 유지 · 재구매</text>
+  <text class="p" x="220" y="340">+</text>
+  <rect class="box" x="20" y="356" width="400" height="72" rx="8"/>
+  <text class="h" x="38" y="386">원가 · 목표 마진</text>
+  <text class="s" x="38" y="412">가격구조의 기본 요소</text>
+  <path d="M220 432 V470" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <rect class="out" x="20" y="474" width="400" height="104" rx="10"/>
+  <text class="h" x="38" y="506">가격구조</text>
+  <text class="s" x="38" y="532">모두 반영한 뒤에도 목표 마진이 남는가?</text>
+  <text class="s" x="38" y="558" style="fill:#92400e">남지 않으면 채널 · 가격 · 관계 운영을 조정</text>
+</svg>
