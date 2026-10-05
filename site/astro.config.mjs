@@ -30,6 +30,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Pricing Strategy Handbook",
+      customCss: ["./src/styles/custom.css"],
       defaultLocale: "en",
       locales: {
         ko: { label: "한국어", lang: "ko" },

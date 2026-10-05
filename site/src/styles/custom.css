@@ -1,0 +1,9 @@
+/* Keep diagrams within one screen: cap the height and let the width follow. */
+.sl-markdown-content img {
+  display: block;
+  margin-inline: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 9rem);
+  max-height: calc(100dvh - 9rem);
+}
