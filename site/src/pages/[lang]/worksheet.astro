@@ -18,6 +18,9 @@ const L = ko
       download: "Markdown(.md) 다운로드",
       copy: "복사",
       reset: "이 챕터 답변 지우기",
+      share: "공유 / 파일로 저장",
+      view: "결과 텍스트 보기 (복사해서 붙여넣기용)",
+      select: "전체 선택",
     }
   : {
       title: "Worksheet Writer",
@@ -28,6 +31,9 @@ const L = ko
       download: "Download Markdown (.md)",
       copy: "Copy",
       reset: "Clear answers for this chapter",
+      share: "Share / save to file",
+      view: "View result text (to copy and paste)",
+      select: "Select all",
     };
 ---
 
@@ -39,9 +45,15 @@ const L = ko
     <div id="ws-toolbar" hidden>
       <button type="button" id="ws-download">{L.download}</button>
       <button type="button" id="ws-copy">{L.copy}</button>
+      <button type="button" id="ws-share" hidden>{L.share}</button>
       <button type="button" id="ws-reset">{L.reset}</button>
     </div>
     <div id="ws-form"></div>
+    <details id="ws-view">
+      <summary>{L.view}</summary>
+      <button type="button" id="ws-view-select">{L.select}</button>
+      <textarea id="ws-view-text" readonly></textarea>
+    </details>
   </div>
   <script is:inline src={`${base}worksheet-writer.js`}></script>
 </StarlightPage>
@@ -64,6 +76,25 @@ const L = ko
   }
   #ws-toolbar { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem; }
   #ws-toolbar[hidden] { display: none; }
+  #ws-toolbar button { min-height: 2.75rem; }
+  #ws-toolbar #ws-share[hidden] { display: none; }
+  #ws-view { margin: 2rem 0 1rem; }
+  #ws-view summary { cursor: pointer; padding: 0.6rem 0; min-height: 2.75rem; }
+  #ws-view textarea { width: 100%; box-sizing: border-box; min-height: 14rem; font: 0.85rem/1.5 monospace; padding: 0.6rem; border: 1px solid var(--sl-color-gray-4); border-radius: 0.4rem; background: var(--sl-color-bg); color: var(--sl-color-text); }
+  #ws-view button { margin: 0.5rem 0; min-height: 2.75rem; border: 1px solid var(--sl-color-gray-5); background: var(--sl-color-bg-nav); color: var(--sl-color-text); border-radius: 0.4rem; padding: 0.35rem 0.8rem; font: inherit; cursor: pointer; }
+  @media (max-width: 50rem) {
+    #ws-app { padding-bottom: 7rem; }
+    #ws-toolbar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; margin: 0;
+      padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
+      background: var(--sl-color-bg); border-top: 1px solid var(--sl-color-gray-5);
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);
+    }
+    #ws-toolbar { gap: 0.4rem; }
+    #ws-toolbar button { flex: 1 1 auto; min-height: 2.5rem; padding: 0.2rem 0.6rem; }
+    #ws-toolbar #ws-reset { flex-basis: 100%; min-height: 2rem; font-size: 0.85rem; }
+    #ws-app { padding-bottom: 6.5rem; }
+  }
   #ws-toolbar #ws-download { background: var(--sl-color-accent); color: var(--sl-color-white); border-color: var(--sl-color-accent); }
   #ws-form { max-width: 100%; }
   #ws-form .ws-answer {

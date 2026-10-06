@@ -523,6 +523,28 @@
       });
     }
   });
+  var shareBtn = document.getElementById("ws-share");
+  if (shareBtn && navigator.share && navigator.canShare) {
+    try {
+      if (navigator.canShare({ files: [new File([""], "a.md", { type: "text/plain" })] })) shareBtn.hidden = false;
+    } catch (e) {}
+    shareBtn.addEventListener("click", function () {
+      var file = new File([toolbar._get()], toolbar.dataset.ch + "-worksheet-answers.md", { type: "text/plain" });
+      navigator.share({ files: [file], title: toolbar.dataset.ch }).catch(function () {});
+    });
+  }
+  var viewBox = document.getElementById("ws-view");
+  var viewText = document.getElementById("ws-view-text");
+  if (viewBox && viewText) {
+    viewBox.addEventListener("toggle", function () {
+      if (viewBox.open && toolbar._get) viewText.value = toolbar._get();
+    });
+    document.getElementById("ws-view-select").addEventListener("click", function () {
+      viewText.focus();
+      viewText.select();
+      viewText.setSelectionRange(0, viewText.value.length);
+    });
+  }
   document.getElementById("ws-reset").addEventListener("click", function () { toolbar._reset(); });
 
   var start = (location.hash || "").replace("#", "");
