@@ -16,14 +16,14 @@
 | CH10 | MODE A — Current Price Diagnosis | MODE A — 현재가격 진단 | rando-knowledge-os | pricing-harness-public (MODE A) |
 | CH11 | MODE B — Target Price | MODE B — 목표가격 역산 | rando-knowledge-os | pricing-harness-public (MODE B) |
 | CH12 | MODE C — Allowable Direct Cost | MODE C — 허용원가 역산 | rando-knowledge-os | pricing-harness-public (MODE C) |
-| CH13 | BEP — Break-Even Point | BEP — 손익분기점 | rando-knowledge-os | pricing-harness-public (BEP) |
+| CH13 | BEP — Break-Even Point | BEP — 손익분기점 | rando-knowledge-os | pricing-harness-public (BEP; Volume Profit) |
 | CH14 | Scenario Compare — Comparing Pricing Scenarios | Scenario Compare — 시나리오 비교 | rando-knowledge-os | pricing-harness-public (Scenario Compare) |
 | CH15 | Validating the Pricing Hypothesis and Making the Decision | 가격가설의 검증과 의사결정 | rando-knowledge-os | pricing-harness-public (limited — see chapter for current tool coverage) |
 
 ## Source Types
 
 - **Knowledge Source**: an internal Knowledge Base (business planning theory and methodology) maintained outside this repository. Only content classified as public-eligible was reorganized into this handbook.
-- **Tool Source**: a pricing-analysis engine (MODE A/B/C, BEP, Scenario Compare) with its own public repository, schemas, tests, and worked-case documentation. Both this handbook's Knowledge and Tool sources are combined into one canonical Pricing Strategy Handbook rather than being published as two separate handbooks.
+- **Tool Source**: a pricing-analysis engine (MODE A/B/C, BEP, Volume Profit, Scenario Compare) with its own public repository, schemas, tests, and worked-case documentation. Both this handbook's Knowledge and Tool sources are combined into one canonical Pricing Strategy Handbook rather than being published as two separate handbooks.
 
 ## Coverage Note
 
