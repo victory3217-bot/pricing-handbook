@@ -77,6 +77,8 @@ const BASE = "/pricing-handbook/";
 const IMAGES_SRC = join(REPO_ROOT, "assets", "images");
 const IMAGES_OUT = join(SITE_ROOT, "public", "images");
 
+const WORKSHEETS_OUT = join(SITE_ROOT, "public", "worksheets");
+if (existsSync(WORKSHEETS_OUT)) rmSync(WORKSHEETS_OUT, { recursive: true, force: true });
 if (existsSync(IMAGES_OUT)) rmSync(IMAGES_OUT, { recursive: true, force: true });
 if (existsSync(IMAGES_SRC)) {
   mkdirSync(IMAGES_OUT, { recursive: true });
@@ -129,11 +131,17 @@ for (const locale of LOCALES) {
     const ch = (file.match(/CH\d\d/) || [file])[0];
     const fallback = `${ch} Worksheet`;
     const { title, body } = extractTitle(raw, fallback);
+    const writerLink =
+      locale === "ko"
+        ? `> [워크시트 작성기에서 답변하고 Markdown으로 저장하기](${BASE}ko/worksheet/#${ch})\n\n`
+        : `> [Answer in the Worksheet Writer and save as Markdown](${BASE}en/worksheet/#${ch})\n\n`;
     writeGenerated(
       join(OUT_ROOT, locale, "manual", file),
       { title, sidebar: { order: wOrder++ } },
-      body
+      writerLink + body
     );
+    mkdirSync(join(WORKSHEETS_OUT, locale), { recursive: true });
+    writeFileSync(join(WORKSHEETS_OUT, locale, file), raw, "utf8");
   }
 
   // Examples
@@ -182,13 +190,13 @@ const LANDING = {
   ko: {
     title: "Pricing Strategy Handbook",
     intro: `가격전략과 Pricing Harness 실행 도구를 하나로 결합한 15개 Chapter 핸드북입니다. 15개 챕터 · 15개 워크시트 · 13개 근거 기반 사례로 구성되어 있습니다.`,
-    footerNote: `각 챕터별 실습 워크시트와 사례는 왼쪽 사이드바의 **워크시트 & 사례** 그룹에서 확인할 수 있습니다.`,
+    footerNote: `각 챕터별 실습 워크시트와 사례는 왼쪽 사이드바의 **워크시트 & 사례** 그룹에서 확인할 수 있습니다. 질문에 직접 답하고 Markdown 파일로 저장하려면 [워크시트 작성기](${BASE}ko/worksheet/)를 이용하세요.`,
     startLink: (firstSlug) => `[CH01부터 시작하기 →](${firstSlug})`,
   },
   en: {
     title: "Pricing Strategy Handbook",
     intro: `A 15-chapter handbook connecting pricing strategy with the Pricing Harness execution engine. 15 Chapters · 15 Worksheets · 13 Source-backed Examples.`,
-    footerNote: `Each chapter's worksheet and examples are available in the **Worksheets & Examples** sidebar group.`,
+    footerNote: `Each chapter's worksheet and examples are available in the **Worksheets & Examples** sidebar group. To answer the questions and save them as a Markdown file, use the [Worksheet Writer](${BASE}en/worksheet/).`,
     startLink: (firstSlug) => `[Start with CH01 →](${firstSlug})`,
   },
 };

@@ -1,0 +1,96 @@
+---
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "ko" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params;
+const base = import.meta.env.BASE_URL;
+const ko = lang === "ko";
+const L = ko
+  ? {
+      title: "워크시트 작성기",
+      intro:
+        "챕터를 고르고 워크시트 질문에 답하세요. 작성을 마치면 Markdown 파일로 내려받아 직접 보관할 수 있습니다.",
+      saved: "작성 내용은 이 브라우저에만 자동 저장되며 서버로 전송되지 않습니다.",
+      pick: "챕터 선택",
+      download: "Markdown(.md) 다운로드",
+      copy: "복사",
+      reset: "이 챕터 답변 지우기",
+    }
+  : {
+      title: "Worksheet Writer",
+      intro:
+        "Choose a chapter and answer the worksheet questions. When you finish, download your answers as a Markdown file and keep it yourself.",
+      saved: "Your answers are saved automatically in this browser only and are never sent to a server.",
+      pick: "Choose a chapter",
+      download: "Download Markdown (.md)",
+      copy: "Copy",
+      reset: "Clear answers for this chapter",
+    };
+---
+
+<StarlightPage frontmatter={{ title: L.title }}>
+  <p>{L.intro}</p>
+  <p><small>{L.saved}</small></p>
+  <div id="ws-app" data-locale={lang} data-base={base}>
+    <div id="ws-nav" role="group" aria-label={L.pick}></div>
+    <div id="ws-toolbar" hidden>
+      <button type="button" id="ws-download">{L.download}</button>
+      <button type="button" id="ws-copy">{L.copy}</button>
+      <button type="button" id="ws-reset">{L.reset}</button>
+    </div>
+    <div id="ws-form"></div>
+  </div>
+  <script is:inline src={`${base}worksheet-writer.js`}></script>
+</StarlightPage>
+
+<style is:global>
+  #ws-nav { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.4rem; margin: 1rem 0; }
+  #ws-nav button, #ws-toolbar button {
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-bg-nav);
+    color: var(--sl-color-text);
+    border-radius: 0.4rem;
+    padding: 0.35rem 0.8rem;
+    cursor: pointer;
+    font: inherit;
+  }
+  #ws-nav button[aria-current="true"] {
+    background: var(--sl-color-accent);
+    color: var(--sl-color-white);
+    border-color: var(--sl-color-accent);
+  }
+  #ws-toolbar { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem; }
+  #ws-toolbar[hidden] { display: none; }
+  #ws-toolbar #ws-download { background: var(--sl-color-accent); color: var(--sl-color-white); border-color: var(--sl-color-accent); }
+  #ws-form { max-width: 100%; }
+  #ws-form .ws-answer {
+    display: block; width: 100%; box-sizing: border-box; min-height: 6rem;
+    padding: 0.6rem; font: inherit; line-height: 1.5;
+    border: 1px solid var(--sl-color-gray-4); border-radius: 0.4rem;
+    background: var(--sl-color-bg); color: var(--sl-color-text); margin: 0.3rem 0 1rem;
+  }
+  #ws-form .ws-table-wrap { overflow-x: auto; margin: 0.5rem 0 1rem; }
+  #ws-form table { width: 100%; }
+  #ws-form .ws-cell, #ws-form .ws-blank {
+    width: 100%; min-width: 7rem; box-sizing: border-box; padding: 0.3rem 0.4rem; font: inherit;
+    border: 1px solid var(--sl-color-gray-4); border-radius: 0.3rem;
+    background: var(--sl-color-bg); color: var(--sl-color-text);
+  }
+  #ws-form .ws-blank { width: 10rem; min-width: 0; }
+  #ws-form .ws-check-row { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin: 0.5rem 0 1rem; align-items: center; }
+  #ws-form .ws-check { display: inline-flex; gap: 0.4rem; align-items: center; }
+  #ws-form .ws-inline { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.5rem; margin: 0.5rem 0; }
+  #ws-form .ws-inline .ws-answer { margin: 0; flex: 1 1 14rem; }
+  #ws-form .ws-inline .ws-answer-sm { min-height: 3.2rem; }
+  #ws-form .ws-inline .ws-cell { flex: 1 1 12rem; width: auto; }
+  #ws-form .ws-select {
+    font: inherit; max-width: 100%; padding: 0.3rem 0.4rem;
+    border: 1px solid var(--sl-color-gray-4); border-radius: 0.3rem;
+    background: var(--sl-color-bg); color: var(--sl-color-text);
+  }
+  #ws-form pre { overflow-x: auto; max-width: 100%; }
+  #ws-form .ws-q { font-weight: 600; margin-top: 1rem; }
+</style>
