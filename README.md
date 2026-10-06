@@ -53,8 +53,8 @@ If you want to browse chapter-by-chapter with navigation, use the Reader. If you
 
 ## Worksheets / Examples
 
-15 Chapters · 15 Worksheets · 12 Source-backed Examples — every example is drawn from real source material (a Knowledge Module or a Pricing Harness CASE document); none was invented.
-15개 Chapter · 15개 워크시트 · 12개 근거 기반 Example — 모든 사례는 실제 원자료(Knowledge Module 또는 Pricing Harness CASE 문서)에서 가져왔으며 창작 사례는 없다.
+15 Chapters · 15 Worksheets · 13 Source-backed Examples — every example is drawn from real source material (a Knowledge Module or a Pricing Harness CASE document); none was invented.
+15개 Chapter · 15개 워크시트 · 13개 근거 기반 Example — 모든 사례는 실제 원자료(Knowledge Module 또는 Pricing Harness CASE 문서)에서 가져왔으며 창작 사례는 없다.
 
 ## Source Policy / 출처 정책
 

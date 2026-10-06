@@ -38,7 +38,7 @@ Founders, consultants, and business planners who want to learn pricing strategy 
 
 ## Worksheets / Examples
 
-Every chapter includes one practical [worksheet](manual/) (15 total). [Examples](examples/) are included only where the source material (a Knowledge Module or a Pricing Harness CASE document) actually contains one (12 total) — no example was invented.
+Every chapter includes one practical [worksheet](manual/) (15 total). [Examples](examples/) are included only where the source material (a Knowledge Module or a Pricing Harness CASE document) actually contains one (13 total) — no example was invented.
 
 ## Source Policy
 

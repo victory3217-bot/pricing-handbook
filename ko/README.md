@@ -38,7 +38,7 @@
 
 ## Worksheet / Example
 
-각 Chapter는 실습 [워크시트](manual/) 1개를 포함한다(총 15개). [사례](examples/)는 원자료(Knowledge Module 또는 Pricing Harness CASE 문서)에 실제로 존재하는 것만 수록했다(총 12개) — 새로 창작한 사례는 없다.
+각 Chapter는 실습 [워크시트](manual/) 1개를 포함한다(총 15개). [사례](examples/)는 원자료(Knowledge Module 또는 Pricing Harness CASE 문서)에 실제로 존재하는 것만 수록했다(총 13개) — 새로 창작한 사례는 없다.
 
 ## 출처 정책
 
