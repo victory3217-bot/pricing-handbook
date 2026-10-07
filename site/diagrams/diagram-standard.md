@@ -10,7 +10,7 @@ Diagrams are a compressed visual form of what a chapter already says. They never
 - Forbidden: steps not in the chapter, outside theory, external frameworks, invented numbers or cases, concepts added for visual balance, definite arrows for relationships the chapter leaves ambiguous.
 - Draw what each connector claims and nothing more: a solid arrow means "feeds / is followed by", a plain `+` means "combined with", a dashed arrow means "return and revise".
 - Each diagram has a spec in `site/diagrams/specs/<name>.md`. Write the spec before the SVG. It lists the chapter passages that support each element, the concepts included and intentionally excluded, what each connector claims, the KO and EN labels (these must match the SVG text exactly), the color meaning, and a **Fidelity notes** section.
-- Fidelity notes record, honestly, anything the diagram implies that the chapter does not state (for example an arrow between two things the chapter presents as parallel) and a recommended revision. Open items at the time of writing: CH03 (arrow between the two logics), CH06 (chain between the three inputs, lens order), CH01 (arrows read as a sequence), CH15 (loop target).
+- Fidelity notes record, honestly, anything the diagram implies that the chapter does not state (for example an arrow between two things the chapter presents as parallel) and a recommended revision. Open items at the time of writing: CH01 (arrows read as a sequence) and CH15 (loop target). The CH03 and CH06 items were resolved by redrawing both diagrams as parallel flows.
 
 ## Palette
 
