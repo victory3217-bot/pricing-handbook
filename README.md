@@ -25,6 +25,31 @@ The **[Reader](https://victory3217-bot.github.io/pricing-handbook/)** (built wit
 
 If you want to browse chapter-by-chapter with navigation, use the Reader. If you want the raw source, edit history, or to cite a specific file, use this repository.
 
+## Where This Handbook Sits / 이 교재의 위치
+
+In this project, **Harness means the Pricing Harness only.** The handbooks are `.md` knowledge sources that feed it; they are not harnesses themselves.
+이 프로젝트에서 **Harness는 Pricing Harness 하나만 가리킨다.** 핸드북류는 하네스에 들어가는 `.md` 지식 소스이며, 하네스 자체가 아니다.
+
+```mermaid
+flowchart LR
+    C["contents<br/>(Google Drive)"] --> H
+    C --> BPH["business_planning_handbook<br/>(Git · .md)"]
+
+    subgraph H["Pricing Harness (Git)"]
+        PH["pricing_handbook"]
+    end
+
+    H --> SIM["Simulation"]
+    BPH -- ".md" --> SIM
+    XL[".excel<br/>TAM · SAM · SOM<br/>Sales Volume"] --> SIM
+    SIM --> P["price × N"]
+
+    H --> OUT["contents′ generated<br/>(magisglobal.co.kr)"]
+
+    BPH -. ".md" .-> IR["IR-Deck"]
+    XL -.-> IR
+```
+
 ## 3-Part Structure / 3-Part 구조
 
 ### Part I — Pricing Strategy / 가격전략

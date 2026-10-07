@@ -10,6 +10,30 @@ A practical handbook that treats pricing not as a single number decision but as 
 
 Founders, consultants, and business planners who want to learn pricing strategy systematically. No specific industry experience is assumed.
 
+## Where This Handbook Sits
+
+In this project, **Harness means the Pricing Harness only.** The handbooks are `.md` knowledge sources that feed it; they are not harnesses themselves.
+
+```mermaid
+flowchart LR
+    C["contents<br/>(Google Drive)"] --> H
+    C --> BPH["business_planning_handbook<br/>(Git · .md)"]
+
+    subgraph H["Pricing Harness (Git)"]
+        PH["pricing_handbook"]
+    end
+
+    H --> SIM["Simulation"]
+    BPH -- ".md" --> SIM
+    XL[".excel<br/>TAM · SAM · SOM<br/>Sales Volume"] --> SIM
+    SIM --> P["price × N"]
+
+    H --> OUT["contents′ generated<br/>(magisglobal.co.kr)"]
+
+    BPH -. ".md" .-> IR["IR-Deck"]
+    XL -.-> IR
+```
+
 ## 3-Part Structure
 
 ### Part I — Pricing Strategy

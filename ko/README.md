@@ -10,6 +10,30 @@
 
 가격전략을 체계적으로 배우고 싶은 창업자·컨설턴트·사업기획 담당자. 특정 산업 경험을 전제하지 않는다.
 
+## 이 교재의 위치
+
+이 프로젝트에서 **Harness는 Pricing Harness 하나만 가리킨다.** 핸드북류는 하네스에 들어가는 `.md` 지식 소스이며, 하네스 자체가 아니다.
+
+```mermaid
+flowchart LR
+    C["contents<br/>(Google Drive)"] --> H
+    C --> BPH["business_planning_handbook<br/>(Git · .md)"]
+
+    subgraph H["Pricing Harness (Git)"]
+        PH["pricing_handbook"]
+    end
+
+    H --> SIM["Simulation"]
+    BPH -- ".md" --> SIM
+    XL[".excel<br/>TAM · SAM · SOM<br/>Sales Volume"] --> SIM
+    SIM --> P["price × N"]
+
+    H --> OUT["contents′ 생성<br/>(magisglobal.co.kr)"]
+
+    BPH -. ".md" .-> IR["IR-Deck"]
+    XL -.-> IR
+```
+
 ## 3-Part 구조
 
 ### Part I — Pricing Strategy
