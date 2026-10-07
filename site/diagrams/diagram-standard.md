@@ -9,7 +9,8 @@ Diagrams are a compressed visual form of what a chapter already says. They never
 - Every box, label, and arrow must trace to text in the public chapter (`ko/chapters/CHxx.md`, `en/chapters/CHxx.md`).
 - Forbidden: steps not in the chapter, outside theory, external frameworks, invented numbers or cases, concepts added for visual balance, definite arrows for relationships the chapter leaves ambiguous.
 - Draw what each connector claims and nothing more: a solid arrow means "feeds / is followed by", a plain `+` means "combined with", a dashed arrow means "return and revise".
-- Before adding or changing a diagram, write down which chapter passage supports each element. A spec per diagram (as in the Business Planning Handbook, `site/diagrams/specs/`) is recommended for new diagrams. The eight diagrams in `assets/images/` do not have specs yet.
+- Each diagram has a spec in `site/diagrams/specs/<name>.md`. Write the spec before the SVG. It lists the chapter passages that support each element, the concepts included and intentionally excluded, what each connector claims, the KO and EN labels (these must match the SVG text exactly), the color meaning, and a **Fidelity notes** section.
+- Fidelity notes record, honestly, anything the diagram implies that the chapter does not state (for example an arrow between two things the chapter presents as parallel) and a recommended revision. Open items at the time of writing: CH03 (arrow between the two logics), CH06 (chain between the three inputs, lens order), CH01 (arrows read as a sequence), CH15 (loop target).
 
 ## Palette
 
