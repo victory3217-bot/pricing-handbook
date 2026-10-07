@@ -466,6 +466,21 @@
   var nav = document.getElementById("ws-nav");
   var form = document.getElementById("ws-form");
   var toolbar = document.getElementById("ws-toolbar");
+  var viewBox = document.getElementById("ws-view");
+  var viewText = document.getElementById("ws-view-text");
+
+  // Keep the "result text" box in sync with the answers and the chapter shown above it.
+  function refreshView() {
+    if (viewBox && viewText && viewBox.open && toolbar._get) viewText.value = toolbar._get();
+  }
+  function selectView() {
+    viewBox.open = true;
+    refreshView();
+    try { viewBox.scrollIntoView({ block: "center" }); } catch (e) {}
+    viewText.focus();
+    viewText.select();
+    viewText.setSelectionRange(0, viewText.value.length);
+  }
 
   function open(ch) {
     CHAPTERS.forEach(function (c) {
@@ -481,7 +496,7 @@
       .then(function (md) {
         var tokens = parse(md);
         var values = load(ch);
-        var onChange = function () { save(ch, values); };
+        var onChange = function () { save(ch, values); refreshView(); };
         render(tokens, values, onChange, form);
         toolbar.hidden = false;
         toolbar.dataset.ch = ch;
@@ -490,8 +505,10 @@
           if (!confirm(T.confirmReset)) return;
           values = {};
           save(ch, values);
-          render(tokens, values, function () { save(ch, values); }, form);
+          render(tokens, values, onChange, form);
+          refreshView();
         };
+        refreshView();
       })
       .catch(function () { form.textContent = T.error; });
   }
@@ -518,11 +535,13 @@
   document.getElementById("ws-copy").addEventListener("click", function () {
     var btn = this;
     var label = btn.textContent;
-    if (navigator.clipboard) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(toolbar._get()).then(function () {
         btn.textContent = T.copied;
         setTimeout(function () { btn.textContent = label; }, 1500);
-      });
+      }, selectView);
+    } else {
+      selectView();
     }
   });
   var shareBtn = document.getElementById("ws-share");
@@ -535,17 +554,9 @@
       navigator.share({ files: [file], title: toolbar.dataset.ch }).catch(function () {});
     });
   }
-  var viewBox = document.getElementById("ws-view");
-  var viewText = document.getElementById("ws-view-text");
   if (viewBox && viewText) {
-    viewBox.addEventListener("toggle", function () {
-      if (viewBox.open && toolbar._get) viewText.value = toolbar._get();
-    });
-    document.getElementById("ws-view-select").addEventListener("click", function () {
-      viewText.focus();
-      viewText.select();
-      viewText.setSelectionRange(0, viewText.value.length);
-    });
+    viewBox.addEventListener("toggle", refreshView);
+    document.getElementById("ws-view-select").addEventListener("click", selectView);
   }
   document.getElementById("ws-reset").addEventListener("click", function () { toolbar._reset(); });
 
