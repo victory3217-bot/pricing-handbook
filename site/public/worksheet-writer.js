@@ -168,7 +168,7 @@
       .join("");
   }
 
-  function serialize(tokens, v) {
+  function serialize(tokens, v, answerLabel) {
     var out = [];
     tokens.forEach(function (tk) {
       if (tk.t === "answer") {
@@ -228,7 +228,7 @@
         out.push(c && c.trim() ? tk.text.replace(/\s+$/, "") + " " + oneLine(c) : tk.text);
       } else if (tk.t === "autoq") {
         var a = v[tk.id];
-        if (a && a.trim()) out.push("  - 답변: " + oneLine(a));
+        if (a && a.trim()) out.push("  - " + (answerLabel || "답변") + ": " + oneLine(a));
       } else {
         out.push(tk.text);
       }
@@ -256,6 +256,7 @@
       loading: "워크시트를 불러오는 중...",
       error: "워크시트를 불러오지 못했습니다.",
       answer: "답변을 입력하세요",
+      answerLabel: "답변",
     },
     en: {
       download: "Download Markdown (.md)",
@@ -265,6 +266,7 @@
       loading: "Loading worksheet...",
       error: "Could not load the worksheet.",
       answer: "Type your answer",
+      answerLabel: "Answer",
     },
   }[locale];
 
@@ -483,7 +485,7 @@
         render(tokens, values, onChange, form);
         toolbar.hidden = false;
         toolbar.dataset.ch = ch;
-        toolbar._get = function () { return serialize(tokens, values); };
+        toolbar._get = function () { return serialize(tokens, values, T.answerLabel); };
         toolbar._reset = function () {
           if (!confirm(T.confirmReset)) return;
           values = {};
