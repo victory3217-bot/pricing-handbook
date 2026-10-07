@@ -236,8 +236,226 @@
     return out.join("\n").replace(/\n{4,}/g, "\n\n\n") + "\n";
   }
 
+  // ---------------------------------------------------------------- Q&A summary
+  // Plain text of only the answered items, as "Q. question / A. answer", for pasting elsewhere.
+  var SUMMARY_L = {
+    ko: { suffix: "답변 정리", empty: "아직 답변한 항목이 없습니다.", checked: "확인함", row: "행" },
+    en: { suffix: "Answer summary", empty: "No answers yet.", checked: "Checked", row: "Row" },
+  };
+
+  // Whitespace tidy-up only (used on text that includes the user's own answers).
+  function squash(s) {
+    return s.replace(/\s+/g, " ").replace(/\(\s+/g, "(").replace(/\s+\)/g, ")").trim();
+  }
+  // For the worksheet's own wording: drop the list marker and Markdown emphasis marks.
+  function clean(s) {
+    return squash(s.replace(/^\s*-\s+/, "").replace(/\*\*|`/g, ""));
+  }
+  function isField(p) {
+    return p.k === "blank" || p.k === "ph" || p.k === "opt";
+  }
+  // Text of a run of parts with the answers filled in; unanswered fields show as "—".
+  function fillParts(parts, v) {
+    var answered = false;
+    var text = parts
+      .map(function (p) {
+        if (p.k === "text") return p.text.replace(/\*\*|`/g, "");
+        if (p.k === "check" || p.k === "box") {
+          if (v[p.fid]) { answered = true; return p.k === "check" ? "[x]" : "■"; }
+          return p.k === "check" ? "[ ]" : "□";
+        }
+        var val = v[p.fid];
+        if (val && String(val).trim()) {
+          answered = true;
+          var o = oneLine(String(val));
+          return p.paren ? "(" + o + ")" : o;
+        }
+        return "—";
+      })
+      .join("");
+    return { text: squash(text.replace(/^\s*-\s+/, "")), answered: answered };
+  }
+  // Split a line of parts into its question text (before the first field) and the filled answer.
+  function splitQA(parts, v, L) {
+    var fi = -1;
+    for (var i = 0; i < parts.length; i++) if (isField(parts[i])) { fi = i; break; }
+    var q = clean(
+      (fi < 0 ? parts : parts.slice(0, fi))
+        .filter(function (p) { return p.k === "text"; })
+        .map(function (p) { return p.text; })
+        .join("")
+    ).replace(/[:：]\s*$/, "");
+    var checked = parts.some(function (p) { return (p.k === "check" || p.k === "box") && v[p.fid]; });
+    var ar = fi < 0 ? { text: "", answered: false } : fillParts(parts.slice(fi), v);
+    var a = ar.answered ? ar.text : checked ? L.checked : "";
+    if (ar.answered && checked) a = "[x] " + a;
+    return { q: q, a: a, answered: ar.answered || checked };
+  }
+
+  function summarize(tokens, v, locale) {
+    var L = SUMMARY_L[locale] || SUMMARY_L.ko;
+    var out = [];
+    var title = "";
+    var section = "";
+    var sectionShown = true;
+    var topic = null; // last numbered topic line, e.g. "1. 고객 정의"
+    var cur = null; // { q, answers[] } for the question being answered
+    var count = 0;
+
+    function qLabel(q) {
+      if (!q) return null;
+      var t = clean(q);
+      var m = t.match(/^(\d+)\.\s+(.*)$/);
+      return m ? "Q" + m[1] + ". " + m[2] : "Q. " + t;
+    }
+    function showSection() {
+      if (!sectionShown && section) { out.push("", "## " + section); sectionShown = true; }
+    }
+    function write(q, answers) {
+      showSection();
+      out.push("");
+      var ql = qLabel(q);
+      if (ql) out.push(ql);
+      var first = true;
+      answers.forEach(function (a) {
+        String(a).split("\n").forEach(function (ln) {
+          out.push((first ? "A. " : "   ") + ln);
+          first = false;
+        });
+      });
+      count++;
+    }
+    function flush() {
+      if (cur && cur.answers.length) write(cur.q, cur.answers);
+      cur = null;
+    }
+    // A self-contained Q/A that must not disturb the open question's context.
+    function own(q, a) {
+      var keep = cur && cur.q;
+      flush();
+      write(q, [a]);
+      if (keep) cur = { q: keep, answers: [] };
+    }
+    function sub(line, ownQ, ownA) {
+      if (cur && cur.q) cur.answers.push(line);
+      else own(ownQ, ownA);
+    }
+    function free(text) {
+      if (cur && cur.q) cur.answers.push(text);
+      else own(topic, text);
+    }
+    function withTopic(q) {
+      var m = q && topic && !/^\s*\d+\.\s/.test(q) ? topic.match(/^(\d+)\.\s+(.*)$/) : null;
+      return m ? m[1] + ". " + clean(m[2]) + " — " + clean(q) : q;
+    }
+    function tableRows(tk) {
+      var hdr = null;
+      var n = 0;
+      tk.rows.forEach(function (r) {
+        if (r.sep) return;
+        if (!hdr) {
+          hdr = r.cells.map(function (c) { return fillParts(c.segs, v).text; });
+          return;
+        }
+        n++;
+        var statics = [];
+        var pairs = [];
+        var any = false;
+        r.cells.forEach(function (c, i) {
+          var hasField = c.segs.some(function (s) { return s.k !== "text"; });
+          var f = fillParts(c.segs, v);
+          if (!hasField) { if (f.text) statics.push(f.text); return; }
+          if (f.answered) {
+            any = true;
+            pairs.push({ h: hdr[i] || "", t: f.text });
+          }
+        });
+        if (!any) return;
+        var label = statics.join(" / ");
+        var qText = label || L.row + " " + n;
+        var ans = r.cells.length === 2 && pairs.length === 1
+          ? pairs[0].t
+          : pairs.map(function (p) { return (p.h ? p.h + ": " : "") + p.t; }).join(", ");
+        var line = r.cells.length === 2 && label ? label + ": " + ans : (label ? label + " — " : "") + ans;
+        sub(line, qText, ans);
+      });
+    }
+
+    tokens.forEach(function (tk) {
+      if (tk.t === "line") {
+        var s = tk.text;
+        var h = s.match(/^(#{1,6})\s+(.*)$/);
+        if (h) {
+          if (h[1].length === 1) { if (!title) title = clean(h[2]); return; }
+          flush();
+          section = clean(h[2]);
+          sectionShown = false;
+          topic = null;
+          cur = null;
+        } else if (/^\s*\d+\.\s+\S/.test(s)) {
+          // A numbered item is both the topic of the bullets below it and a question in its own right.
+          flush();
+          topic = s.trim();
+          cur = { q: s.trim(), answers: [] };
+        } else if (isQuestion(s)) {
+          flush();
+          cur = { q: withTopic(s.trim()), answers: [] };
+        }
+      } else if (tk.t === "answer" || tk.t === "under" || tk.t === "autoq" || tk.t === "bullet") {
+        var val = v[tk.id];
+        if (val && String(val).trim()) free(String(val).replace(/\s+$/, ""));
+      } else if (tk.t === "colon") {
+        var cv = v[tk.id];
+        if (cv && String(cv).trim()) {
+          var label = clean(tk.text).replace(/[:：]\s*$/, "");
+          sub(label + ": " + oneLine(String(cv)), label, oneLine(String(cv)));
+        }
+      } else if (tk.t === "inline") {
+        var segs = tk.segs;
+        var hd = segs[0] && segs[0].k === "text" ? segs[0].text.match(/^\s*#{1,6}\s+/) : null;
+        if (hd) {
+          // A heading that itself contains a blank, e.g. "## 1. 가격 입력 (컴포넌트: ____ )".
+          var hf = fillParts(segs, v);
+          flush();
+          section = hf.answered
+            ? clean(hf.text.replace(/^\s*#{1,6}\s+/, ""))
+            : clean(segs.filter(function (p) { return p.k === "text"; }).map(function (p) { return p.text; }).join("").replace(/^\s*#{1,6}\s+/, "")).replace(/\s*\([^()]*[:：]\s*\)\s*$/, "");
+          sectionShown = false;
+          topic = null;
+          if (hf.answered) { showSection(); count++; }
+        } else {
+          var f = fillParts(segs, v);
+          if (f.answered) {
+            var qa = splitQA(segs, v, L);
+            sub(f.text, withTopic(qa.q), qa.a);
+          }
+        }
+      } else if (tk.t === "check") {
+        var cq = splitQA(tk.parts, v, L);
+        if (cq.answered) {
+          var hasField = tk.parts.some(isField);
+          own(hasField ? cq.q : topic || cq.q, hasField ? cq.a : fillParts(tk.parts, v).text);
+        }
+      } else if (tk.t === "form") {
+        tk.lines.forEach(function (fl) {
+          var ff = fillParts(fl.parts, v);
+          if (!ff.answered) return;
+          var fq = splitQA(fl.parts, v, L);
+          sub(ff.text, withTopic(fq.q), fq.a);
+        });
+      } else if (tk.t === "table") {
+        tableRows(tk);
+      }
+    });
+    flush();
+
+    var head = (title ? title + " — " : "") + L.suffix;
+    if (!count) return "# " + head + "\n\n" + L.empty + "\n";
+    return "# " + head + "\n" + out.join("\n") + "\n";
+  }
+
   if (typeof document === "undefined") {
-    module.exports = { parse: parse, serialize: serialize };
+    module.exports = { parse: parse, serialize: serialize, summarize: summarize };
     return;
   }
 
@@ -469,9 +687,14 @@
   var viewBox = document.getElementById("ws-view");
   var viewText = document.getElementById("ws-view-text");
 
+  // "qa" = only the answered items as Q/A; "full" = the whole worksheet as Markdown.
+  var viewMode = "qa";
+  function currentText() {
+    return viewMode === "qa" && toolbar._qa ? toolbar._qa() : toolbar._get();
+  }
   // Keep the "result text" box in sync with the answers and the chapter shown above it.
   function refreshView() {
-    if (viewBox && viewText && viewBox.open && toolbar._get) viewText.value = toolbar._get();
+    if (viewBox && viewText && viewBox.open && toolbar._get) viewText.value = currentText();
   }
   function selectView() {
     viewBox.open = true;
@@ -501,6 +724,7 @@
         toolbar.hidden = false;
         toolbar.dataset.ch = ch;
         toolbar._get = function () { return serialize(tokens, values, T.answerLabel); };
+        toolbar._qa = function () { return summarize(tokens, values, locale); };
         toolbar._reset = function () {
           if (!confirm(T.confirmReset)) return;
           values = {};
@@ -536,7 +760,7 @@
     var btn = this;
     var label = btn.textContent;
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(toolbar._get()).then(function () {
+      navigator.clipboard.writeText(currentText()).then(function () {
         btn.textContent = T.copied;
         setTimeout(function () { btn.textContent = label; }, 1500);
       }, selectView);
@@ -557,6 +781,17 @@
   if (viewBox && viewText) {
     viewBox.addEventListener("toggle", refreshView);
     document.getElementById("ws-view-select").addEventListener("click", selectView);
+    ["qa", "full"].forEach(function (mode) {
+      var b = document.getElementById("ws-mode-" + mode);
+      if (!b) return;
+      b.addEventListener("click", function () {
+        viewMode = mode;
+        ["qa", "full"].forEach(function (m2) {
+          document.getElementById("ws-mode-" + m2).setAttribute("aria-pressed", m2 === mode ? "true" : "false");
+        });
+        refreshView();
+      });
+    });
   }
   document.getElementById("ws-reset").addEventListener("click", function () { toolbar._reset(); });
 
