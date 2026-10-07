@@ -1,1 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 820" role="img" aria-labelledby="t d"><title id="t">가격가설 검증 순환</title><desc id="d">가격가설을 네 요소로 검증하고 피드백으로 사업모델 가정을 수정한다.</desc><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#475569"/></marker></defs><style>text{font-family:"Malgun Gothic","Noto Sans KR",sans-serif;fill:#0f172a}.h{font-size:21px;font-weight:700}.s{font-size:16px;fill:#475569}.b{fill:#eef2ff;stroke:#6366f1;stroke-width:2}.e{fill:#ecfdf5;stroke:#059669;stroke-width:2}.o{fill:#fef3c7;stroke:#d97706;stroke-width:3}.l{stroke:#475569;stroke-width:2.5;fill:none;marker-end:url(#a)}.r{stroke:#dc2626;stroke-width:2.5;fill:none;stroke-dasharray:7 5;marker-end:url(#a)}</style><rect width="440" height="820" rx="16" fill="#fff"/><text class="h" x="220" y="38" text-anchor="middle">가격은 검증하고 수정하는 가설이다</text><g text-anchor="middle"><rect class="o" x="30" y="75" width="380" height="82" rx="14"/><text class="h" x="220" y="124">가격가설</text><rect class="b" x="30" y="200" width="380" height="82" rx="12"/><text class="h" x="220" y="233">1. 조사검증대상</text><text class="s" x="220" y="262">무엇을 확인할 것인가?</text><rect class="b" x="30" y="325" width="380" height="82" rx="12"/><text class="h" x="220" y="358">2. 측정지표</text><text class="s" x="220" y="387">무엇으로 판단할 것인가?</text><rect class="b" x="30" y="450" width="380" height="82" rx="12"/><text class="h" x="220" y="483">3. 방법 및 계획</text><text class="s" x="220" y="512">어떻게 · 언제 · 누구에게?</text><rect class="e" x="30" y="575" width="380" height="82" rx="12"/><text class="h" x="220" y="608">4. 피드백데이터</text><text class="s" x="220" y="637">어느 가정을 수정할 것인가?</text></g><path class="l" d="M220 157v43"/><path class="l" d="M220 282v43"/><path class="l" d="M220 407v43"/><path class="l" d="M220 532v43"/><path class="r" d="M220 657v75H18V116h12"/><text class="s" x="220" y="780" text-anchor="middle">가격 · 고객 · 가치 · 채널 · 원가 가정을 업데이트</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 792" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">가격가설 검증 순환</title>
+  <desc id="d">가격가설을 네 요소로 검증하고 피드백으로 사업모델 가정을 수정한다.</desc>
+  <defs>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#14253D"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#C49A5A"/>
+    </marker>
+  </defs>
+  <g id="background">
+    <rect width="480" height="792" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="headline">
+    <text x="240" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격은 검증하고</text>
+    <text x="240" y="71" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">수정하는 가설이다</text>
+  </g>
+  <g id="price-hypothesis">
+    <rect x="40" y="102" width="380" height="80" rx="10" fill="#C49A5A"/>
+    <text x="230" y="149" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격가설</text>
+  </g>
+  <g id="validation-target">
+    <rect x="40" y="218" width="380" height="78" rx="10" fill="#315B62"/>
+    <text x="230" y="253" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">1. 조사검증대상</text>
+    <text x="230" y="276" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">무엇을 확인할 것인가?</text>
+  </g>
+  <g id="metric">
+    <rect x="40" y="332" width="380" height="78" rx="10" fill="#315B62"/>
+    <text x="230" y="367" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">2. 측정지표</text>
+    <text x="230" y="390" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">무엇으로 판단할 것인가?</text>
+  </g>
+  <g id="method-plan">
+    <rect x="40" y="446" width="380" height="78" rx="10" fill="#315B62"/>
+    <text x="230" y="481" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">3. 방법 및 계획</text>
+    <text x="230" y="504" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">어떻게 · 언제 · 누구에게?</text>
+  </g>
+  <g id="feedback">
+    <rect x="40" y="560" width="380" height="78" rx="10" fill="#14253D"/>
+    <text x="230" y="595" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">4. 피드백데이터</text>
+    <text x="230" y="618" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">어느 가정을 수정할 것인가?</text>
+  </g>
+  <g id="flow">
+    <line x1="230" y1="184" x2="230" y2="215" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <line x1="230" y1="298" x2="230" y2="329" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <line x1="230" y1="412" x2="230" y2="443" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <line x1="230" y1="526" x2="230" y2="557" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+  </g>
+  <g id="return-loop">
+    <path d="M420 599 H452 V142 H422" fill="none" stroke="#C49A5A" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow-gold)"/>
+  </g>
+  <g id="legend">
+    <line x1="40" y1="674" x2="84" y2="674" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <text x="96" y="680" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">실선 화살표: 검증의 순서</text>
+    <line x1="40" y1="714" x2="84" y2="714" stroke="#C49A5A" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow-gold)"/>
+    <text x="96" y="720" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">점선 화살표: 가격 · 고객 · 가치 · 채널 ·</text>
+    <text x="96" y="742" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">원가 가정을 업데이트</text>
+  </g>
+</svg>
