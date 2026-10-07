@@ -4,10 +4,6 @@
 - **Related Tool**: MODE C (`core/engine/modes/mode_c.py`, `run_mode_c`)
 - **Source**: docs/features/mode_c_allowable_cost/CASE.md, TC5 (hypothetical data, `client_id: sample_co_epsilon` — not a real company)
 
-## What This Example Illustrates
-
-This example shows how MODE C's allowable-cost formula is calculated when (1) a VAT-inclusive displayed price, (2) a fee based on net sales (b), (3) a fee based on gross payment (a), and (4) a fixed-amount cost (F) are all present at the same time. It also confirms, via the self-check (expected_contribution_margin_rate), that the calculated result matches the target CM rate exactly.
-
 ## Input Values
 
 | Item | Value |
@@ -19,6 +15,21 @@ This example shows how MODE C's allowable-cost formula is calculated when (1) a 
 | b (sum of rate_of_net_sales) | 0.1 |
 | a (sum of rate_of_gross_payment) | 0.03 |
 | F (sum of fixed-amount variable_selling_delivery) | 1,000 |
+
+## Exercise
+
+When the market price is already fixed, work out how much allowable cost you can spend while keeping the target CM rate.
+
+1. What is the allowable direct cost (ADC)? (The displayed price includes VAT, so work out N and G first.)
+2. Use the ADC you found to self-check that the CM rate matches the target of 0.3.
+3. If the same underlying economics (N=100,000, G=110,000) were entered as a VAT-exclusive display (`price_includes_vat=false`), would the ADC change?
+
+<details>
+<summary>Show answer and walkthrough</summary>
+
+## What This Example Illustrates
+
+This example shows how MODE C's allowable-cost formula is calculated when (1) a VAT-inclusive displayed price, (2) a fee based on net sales (b), (3) a fee based on gross payment (a), and (4) a fixed-amount cost (F) are all present at the same time. It also confirms, via the self-check (expected_contribution_margin_rate), that the calculated result matches the target CM rate exactly.
 
 ## Calculation Process
 
@@ -60,3 +71,5 @@ CMR = 30,000 / 100,000 = 0.30 = t  ✓
 ## Note (the display method does not change the result)
 
 CASE.md's TC6 enters the same underlying economics (N=100,000, G=110,000) with `price_includes_vat=false` (VAT-exclusive display), and produces the same ADC of 55,700. This shows that the VAT display method (inclusive/exclusive) does not change the actual allowable cost itself — a principle already established in MODE A/B that holds equally in MODE C.
+
+</details>

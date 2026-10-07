@@ -4,10 +4,6 @@
 - **Related Tool**: BEP (`core/engine/modes/bep.py`, `run_bep`)
 - **Source**: `docs/features/bep/CASE.md`, TC1 ("simple positive CM"). A hand-calculation verification case using hypothetical data (`client_id: sample_co_zeta`) — not actual client data.
 
-## What This Example Illustrates
-
-This example shows the most basic normal path of the BEP calculation (CMu > 0, FC > 0). It demonstrates how the formula `Q_BEP = FC / CMu` produces a normal break-even sales quantity when the per-unit contribution margin is positive and fixed operating cost exists.
-
 ## Inputs
 
 | Item | Value |
@@ -17,6 +13,21 @@ This example shows the most basic normal path of the BEP calculation (CMu > 0, F
 | variable_selling_delivery (fixed-amount item) | 100 |
 | fixed_operating_cost (component-scoped, applies_to_component: "main") | 50,000 |
 | fixed_operating_cost.basis | per_month |
+
+## Exercise
+
+Using the inputs above, work out the following yourself.
+
+1. What is the contribution margin per unit (CMu)?
+2. What is the break-even sales quantity (Q_BEP) that recovers the monthly fixed operating cost?
+3. For which period should this quantity be read?
+
+<details>
+<summary>Show answer and walkthrough</summary>
+
+## What This Example Illustrates
+
+This example shows the most basic normal path of the BEP calculation (CMu > 0, FC > 0). It demonstrates how the formula `Q_BEP = FC / CMu` produces a normal break-even sales quantity when the per-unit contribution margin is positive and fixed operating cost exists.
 
 ## Calculation
 
@@ -42,3 +53,5 @@ Q_BEP = FC / CMu
 ## Interpretation
 
 At the current price (N=1,000) and cost structure (direct cost 400, variable cost 100), this component earns a per-unit contribution margin of 500. To recover the monthly fixed operating cost of 50,000, 100 units must be sold per month to reach break-even. Since `basis: "per_month"`, this 100 units should be interpreted as a "monthly" sales target — the `unit` of `break_even_quantity_exact` is simply a quantity unit ("units") and does not represent a period; quantity and period (analysis_period_basis) are treated as separate pieces of information (see SPEC.md §4 REVISED).
+
+</details>

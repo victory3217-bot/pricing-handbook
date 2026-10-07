@@ -4,10 +4,6 @@
 - **Related Tool**: Volume Profit (`core/engine/modes/volume_profit.py`, `run_volume_profit`)
 - **Source**: `core/schemas/examples/valid/08_volume_profit.json` (input) and `core/schemas/examples/analysis_results/08_volume_profit.analysis_result.json` (result); specified in `docs/features/volume_profit/SPEC.md`. Hypothetical data for teaching (`client_id: sample_co_eta`) — not actual company data.
 
-## What This Example Illustrates
-
-If BEP answers "how many units must be sold to stop losing money," this example shows how Volume Profit answers the next question: "if we sell the quantity we planned, how much is left, and how far above break-even is that plan?" The input is the same structure as CH13-EX01 (the normal BEP path) plus a monthly sales plan, `sales_plan` — the simplest complete-input case.
-
 ## Inputs
 
 | Item | Value |
@@ -21,6 +17,22 @@ If BEP answers "how many units must be sold to stop losing money," this example 
 | `sales_plan.period_basis` | per_month |
 
 It matters that the fixed operating cost is entered at component scope (`main`). If shared fixed cost were entered as `blended_only`, FC would be `UNKNOWN` and this calculation would not hold (see CH13 §4).
+
+## Exercise
+
+Using the inputs above, work out the following yourself.
+
+1. What are the contribution margin per unit (CMu) and the break-even sales quantity (Q_BEP)?
+2. For the plan of selling 150 units a month, what are total net sales, operating profit, and operating profit rate?
+3. What is the margin of safety (quantity and rate), and how should it be read?
+4. Why do the metrics carry the `ESTIMATED` status?
+
+<details>
+<summary>Show answer and walkthrough</summary>
+
+## What This Example Illustrates
+
+If BEP answers "how many units must be sold to stop losing money," this example shows how Volume Profit answers the next question: "if we sell the quantity we planned, how much is left, and how far above break-even is that plan?" The input is the same structure as CH13-EX01 (the normal BEP path) plus a monthly sales plan, `sales_plan` — the simplest complete-input case.
 
 ## Calculation
 
@@ -61,3 +73,5 @@ At the current price (N = 20,000) and cost structure, the contribution margin pe
 **Why the status is `ESTIMATED`.** The shipping cost is `per_order` (2,000 per order). Because Volume Profit calculates `CMu × Q`, it assumes one unit is sold per order for `per_order` costs. If customers buy two or more units in one order, shipping is overstated and the true operating profit may be higher than this figure. This does not mean the value is wrong; it marks that the value depends on this assumption. The same `Q_BEP` is reported as `OK` by BEP and `ESTIMATED` by Volume Profit because Volume Profit is the module that makes this assumption visible.
 
 **What this example does not show.** `planned_quantity` is simply an input supplied from outside; whether that volume is actually achievable must be verified separately against the basis for determining Qty by transaction type (CH13 §7, KM062). The rules for a plan that falls short of break-even (a negative margin of safety with a `BELOW_BREAK_EVEN` warning) are described in CH13 §6, but the source material for this example contains no input or result for that case, so no figures are given for it.
+
+</details>

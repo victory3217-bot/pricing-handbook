@@ -4,10 +4,6 @@
 - **관련 Tool**: Volume Profit (`core/engine/modes/volume_profit.py`, `run_volume_profit`)
 - **출처**: `core/schemas/examples/valid/08_volume_profit.json`(입력)과 `core/schemas/examples/analysis_results/08_volume_profit.analysis_result.json`(결과), 명세는 `docs/features/volume_profit/SPEC.md`. 교육용 가상 데이터(`client_id: sample_co_eta`)이며 실제 기업 데이터가 아니다.
 
-## 무엇을 설명하는 사례인가
-
-BEP가 "몇 개를 팔아야 손해가 아닌가"에 답한다면, 이 사례는 그다음 질문 — "계획한 수량을 팔면 얼마가 남고, 손익분기 대비 얼마나 여유가 있는가" — 을 Volume Profit이 어떻게 계산하는지 보여준다. 입력은 CH13-EX01과 같은 구조(BEP의 정상 경로)에 월 판매 계획 `sales_plan`을 더한 가장 단순한 완전-입력 케이스다.
-
 ## 입력값
 
 | 항목 | 값 |
@@ -21,6 +17,22 @@ BEP가 "몇 개를 팔아야 손해가 아닌가"에 답한다면, 이 사례는
 | `sales_plan.period_basis` | per_month |
 
 고정운영비를 컴포넌트 범위(`main`)로 입력했다는 점이 중요하다. 공유 고정비를 `blended_only`로 입력하면 FC가 `UNKNOWN`이 되어 이 계산이 성립하지 않는다(CH13 §4 참조).
+
+## 문제
+
+위 입력값으로 다음을 직접 구해 보세요.
+
+1. 단위당 공헌이익(CMu)과 손익분기 판매수량(Q_BEP)은 얼마인가요?
+2. 월 150개를 판매하는 계획의 총 순매출, 영업이익, 영업이익률은 얼마인가요?
+3. 안전한계(수량과 비율)는 얼마이고, 어떻게 읽어야 하나요?
+4. 지표 상태가 `ESTIMATED`로 나오는 이유는 무엇인가요?
+
+<details>
+<summary>정답과 풀이 보기</summary>
+
+## 무엇을 설명하는 사례인가
+
+BEP가 "몇 개를 팔아야 손해가 아닌가"에 답한다면, 이 사례는 그다음 질문 — "계획한 수량을 팔면 얼마가 남고, 손익분기 대비 얼마나 여유가 있는가" — 을 Volume Profit이 어떻게 계산하는지 보여준다. 입력은 CH13-EX01과 같은 구조(BEP의 정상 경로)에 월 판매 계획 `sales_plan`을 더한 가장 단순한 완전-입력 케이스다.
 
 ## 계산 과정
 
@@ -61,3 +73,5 @@ margin_of_safety_rate     = 50 / 150                              ≈ 33.33%
 **상태가 `ESTIMATED`인 이유.** 배송비가 `per_order`(주문당 2,000)이기 때문이다. Volume Profit은 `CMu × Q`를 계산하므로 `per_order` 비용을 주문당 1개 판매로 가정한다. 고객이 한 주문에 2개 이상 사면 배송비가 과대 계상되어 실제 영업이익은 이 값보다 클 수 있다. 값이 틀렸다는 뜻이 아니라 이 가정에 의존한다는 표시이며, 같은 `Q_BEP`를 BEP는 `OK`로, Volume Profit은 `ESTIMATED`로 보고하는 것도 이 가정을 드러내는 쪽이 Volume Profit이기 때문이다.
 
 **이 사례가 보여주지 않는 것.** `planned_quantity`는 외부에서 주어진 입력일 뿐이며, 이 판매량이 실제로 달성 가능한지는 거래유형별 Qty 산정 근거(CH13 §7, KM062)로 따로 검증해야 한다. 계획이 손익분기에 못 미치는 경우(안전한계가 음수가 되고 `BELOW_BREAK_EVEN` 경고가 붙는 경우)의 규칙은 CH13 §6에 설명되어 있으나, 이 사례의 원자료에는 그 경우의 입력·결과가 없어 수치로 싣지 않았다.
+
+</details>

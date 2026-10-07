@@ -14,6 +14,17 @@
 - `target_contribution_margin_rate = 0.3`
 - `target_market_price = 1000` (same component, `price_includes_vat = false`)
 
+## Exercise
+
+The baseline scenario (`A_baseline`) uses the common Base Input above as it is, and the variant scenario (`B_price_up`) changes only `actual_price` to 1200. Work out the following yourself.
+
+1. What are the baseline scenario's contribution margin (CM), contribution margin rate (CMR), and break-even quantity (Q_BEP)?
+2. What are the CM, CMR, and Q_BEP of the price-increase scenario?
+3. What are the four deltas against the baseline (net sales, contribution margin, contribution margin rate, break-even quantity), and how can the effect of the price increase be interpreted?
+
+<details>
+<summary>Show answer and walkthrough</summary>
+
 ## TC1 — Baseline (`A_baseline`, no overrides)
 
 This scenario is designated as-is as the `baseline_scenario_id`.
@@ -50,3 +61,5 @@ Calculation: `N = 1200` → `CM = 1200 − 400 − 100 = 700`, `CMR = 0.583`. BE
 | break_even_quantity_delta | ≈ −28.57 | OK | Break-even quantity decreased by about 28.57 — BEP improved |
 
 This example shows the typical pattern where raising the price improves both contribution margin and contribution margin rate together, while the sales volume needed to break even decreases (BEP improves). All delta values are simple subtractions of MODE A's and BEP's existing outputs — Scenario Compare itself introduces no separate calculation formula.
+
+</details>

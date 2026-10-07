@@ -4,6 +4,17 @@
 - **Related MN/KM**: MN08 / KM068 (Data-driven pivoting)
 - **Source**: *The Meticulous Way to Do a Startup*, Part 6, Nutrition Supplement Field Validation Case, pp. 210-211
 
+## Think it through
+
+Suppose you began selling on the hypothesis that "people will come back to an old nutrition supplement out of nostalgia."
+
+1. What happened to this hypothesis in the course of actual sales activity? What did customers care about more?
+2. What did that result force you to change?
+3. Is there any conclusion about price that can be drawn directly from this case alone?
+
+<details>
+<summary>Show answer and walkthrough</summary>
+
 ## What This Case Illustrates
 
 This case shows a hypothesis about customer value perception — not price itself — being broken by field validation, and how that result revised the entire approach. It is cited as a concrete illustration of the principle CH15 emphasizes: that a validation result can shake assumptions in other components, not just price itself. The case does not deal with price, but the same pivoting mechanism — data revising an existing hypothesis — applies equally to validating price hypotheses.
@@ -18,3 +29,5 @@ Pivoting does not mean abandoning the original idea — it means new data revise
 
 - The flow in this case — hypothesis → field validation → data shakes the hypothesis → approach revised — is the same pivoting logic described in Layer 3 of CH15 Section 4 (Framework / Logic).
 - This case suggests that, in validating price hypotheses too, a validation result can shake assumptions about the value proposition or the message itself, not just price acceptance. That said, this case itself does not mention any price figures or price-related details, so no specific conclusion about price is drawn directly from it.
+
+</details>

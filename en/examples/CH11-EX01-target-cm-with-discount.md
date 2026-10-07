@@ -4,10 +4,6 @@
 - Related Tool: MODE B (`core/engine/modes/mode_b.py`, `run_mode_b`)
 - Source: docs/features/mode_b_target_price/CASE.md (fictional data, `client_id: sample_co_delta`), consistent with SPEC.md TC4/TC6
 
-## What This Example Illustrates
-
-This example shows the procedure for reverse-calculating the required selling price by directly specifying a target Contribution Margin Rate, when the Contribution Margin Rate at the current price (confirmed via MODE A) falls short of investor expectations. It additionally shows that, when a standing discount policy exists, the "actual billed amount" and the "price to post on the list price sheet" differ. This example uses fictional data (Sample Co. Delta) and is not a real client case.
-
 ## Scenario
 
 Sample Co. Delta sells a subscription service. Running MODE A showed that the Contribution Margin Rate at the current price fell short of investor expectations. Management set the target Contribution Margin Rate at 30% and asked, "So what price should we sell at?"
@@ -19,6 +15,21 @@ Sample Co. Delta sells a subscription service. Running MODE A showed that the Co
 - PG (payment gateway) fee `a`: 3% of gross payment (`rate_of_gross_payment`)
 - VAT `v`: 10%, display price includes VAT (`price_includes_vat = true`)
 - Target Contribution Margin Rate `t`: 0.30
+
+## Exercise
+
+Using the scenario above, work out the price needed to achieve the 30% target Contribution Margin Rate.
+
+1. What are the target net sales N (VAT excluded) and the target gross payment G (VAT included)?
+2. If that price is fed back into MODE A as a check, what should the Contribution Margin (CM) and Contribution Margin Rate come to?
+3. If this company always sells at a standing 10% discount off the list price, what target list price should be posted on the list price sheet?
+
+<details>
+<summary>Show answer and walkthrough</summary>
+
+## What This Example Illustrates
+
+This example shows the procedure for reverse-calculating the required selling price by directly specifying a target Contribution Margin Rate, when the Contribution Margin Rate at the current price (confirmed via MODE A) falls short of investor expectations. It additionally shows that, when a standing discount policy exists, the "actual billed amount" and the "price to post on the list price sheet" differ. This example uses fictional data (Sample Co. Delta) and is not a real client case.
 
 ## Calculation
 
@@ -58,3 +69,5 @@ required_list_price = required_selling_price / (1 − discount_rate)
 ```
 
 **Consulting interpretation**: The catalog/list price sheet should post 21,555.95, and applying a 10% discount should bring the actual billed amount to 19,400.35, achieving the target 30% Contribution Margin Rate. You should not judge a price as "expensive" from the list price alone — you must confirm whether the target is achieved based on the actual billed amount.
+
+</details>

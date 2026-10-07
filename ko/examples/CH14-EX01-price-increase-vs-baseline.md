@@ -14,6 +14,17 @@
 - `target_contribution_margin_rate = 0.3`
 - `target_market_price = 1000` (같은 component, `price_includes_vat = false`)
 
+## 문제
+
+기준 시나리오(`A_baseline`)는 위 공통 Base Input을 그대로 쓰고, 변형 시나리오(`B_price_up`)는 `actual_price`만 1200으로 바꿉니다. 직접 구해 보세요.
+
+1. 기준 시나리오의 공헌이익(CM), 공헌이익률(CMR), 손익분기 수량(Q_BEP)은 얼마인가요?
+2. 가격 인상 시나리오의 CM, CMR, Q_BEP는 얼마인가요?
+3. 기준 대비 delta 4가지(순매출, 공헌이익, 공헌이익률, 손익분기 수량)는 얼마이고, 가격 인상의 효과를 어떻게 해석할 수 있나요?
+
+<details>
+<summary>정답과 풀이 보기</summary>
+
 ## TC1 — Baseline (`A_baseline`, override 없음)
 
 이 시나리오가 그대로 `baseline_scenario_id`로 지정된다.
@@ -50,3 +61,5 @@
 | break_even_quantity_delta | ≈ −28.57 | OK | 손익분기 수량이 약 28.57 감소 — BEP 개선 |
 
 이 사례는 가격을 인상할 때 공헌이익과 공헌이익률이 함께 개선되고, 손익분기에 필요한 판매수량은 줄어든다는(BEP 개선) 전형적인 방향성을 보여준다. 모든 delta 값은 MODE A와 BEP의 기존 출력을 그대로 뺀 값이며, Scenario Compare 자체가 별도의 계산식을 도입하지 않았다.
+
+</details>

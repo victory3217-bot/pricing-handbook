@@ -4,10 +4,6 @@
 - **관련 Tool**: MODE C (`core/engine/modes/mode_c.py`, `run_mode_c`)
 - **출처**: docs/features/mode_c_allowable_cost/CASE.md, TC5 (가상 데이터, `client_id: sample_co_epsilon` — 실존 기업 아님)
 
-## 무엇을 설명하는 사례인가
-
-MODE C의 허용원가 공식이 (1) VAT 포함 표시가격, (2) 순매출 기준 수수료(b), (3) 총지불액 기준 수수료(a), (4) 고정 금액 비용(F)이 동시에 존재할 때 어떻게 계산되는지 보여준다. 또한 계산 결과가 자체 검산(expected_contribution_margin_rate)을 통해 목표 CM율과 정확히 일치함을 확인하는 예시다.
-
 ## 입력값
 
 | 항목 | 값 |
@@ -19,6 +15,21 @@ MODE C의 허용원가 공식이 (1) VAT 포함 표시가격, (2) 순매출 기�
 | b (rate_of_net_sales 합) | 0.1 |
 | a (rate_of_gross_payment 합) | 0.03 |
 | F (고정 금액 variable_selling_delivery 합) | 1,000 |
+
+## 문제
+
+시장가격이 이미 정해져 있을 때, 목표 CM율을 지키려면 허용원가를 얼마까지 쓸 수 있는지 직접 구해 보세요.
+
+1. 허용원가(ADC)는 얼마인가요? (표시가격이 VAT 포함이므로 N과 G를 먼저 구하세요.)
+2. 구한 ADC로 검산해서 CM율이 목표 0.3과 일치하는지 확인하세요.
+3. 같은 경제 구조(N=100,000, G=110,000)를 VAT 제외 표시(`price_includes_vat=false`)로 입력하면 ADC가 달라질까요?
+
+<details>
+<summary>정답과 풀이 보기</summary>
+
+## 무엇을 설명하는 사례인가
+
+MODE C의 허용원가 공식이 (1) VAT 포함 표시가격, (2) 순매출 기준 수수료(b), (3) 총지불액 기준 수수료(a), (4) 고정 금액 비용(F)이 동시에 존재할 때 어떻게 계산되는지 보여준다. 또한 계산 결과가 자체 검산(expected_contribution_margin_rate)을 통해 목표 CM율과 정확히 일치함을 확인하는 예시다.
 
 ## 계산 과정
 
@@ -60,3 +71,5 @@ CMR = 30,000 / 100,000 = 0.30 = t  ✓
 ## 참고 (표시가격 방식은 결과를 바꾸지 않는다)
 
 CASE.md의 TC6은 동일한 경제 구조(N=100,000, G=110,000)를 `price_includes_vat=false`(VAT 제외 표시)로 입력한 경우로, ADC가 동일하게 55,700이 나온다. 이는 VAT 표시 방식(포함/제외)이 실제 허용원가 자체를 바꾸지 않는다는 것을 보여준다 — MODE A/B에서 이미 확립된 원칙이 MODE C에서도 동일하게 유지된다.
+
+</details>
