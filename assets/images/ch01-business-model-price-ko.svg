@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 716" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 732" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
   <title id="t">가격은 비즈니스모델의 결과</title>
-  <desc id="d">고객, 가치, 전달방식, 비용과 경쟁이 가격으로 모인다.</desc>
+  <desc id="d">가격은 누가 사는가, 왜 사는가, 어디에서 사는가, 우리는 무엇을 해야 하는가, 얼마가 드는가, 어떤 경쟁자와 비교되는가라는 여러 질문이 겹쳐 있는 구조이며, 이 질문들에 대한 잠정적 답이 수치로 모인 결과다. 가격은 정합성의 기준이자 포지셔닝 신호이고, 다시 시장 인식을 강화한다.</desc>
   <defs>
     <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0 L10 5 L0 10 z" fill="#14253D"/>
@@ -10,43 +10,57 @@
     </marker>
   </defs>
   <g id="background">
-    <rect width="480" height="716" rx="14" fill="#F6F2EA"/>
+    <rect width="480" height="732" rx="14" fill="#F6F2EA"/>
   </g>
   <g id="headline">
     <text x="240" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">비즈니스모델의 답이 가격으로 모인다</text>
   </g>
+  <g id="questions">
   <g id="customer">
-    <rect x="40" y="75" width="400" height="78" rx="10" fill="#315B62"/>
-    <text x="240" y="110" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">고객</text>
-    <text x="240" y="133" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">누가 사는가</text>
+    <rect x="40" y="75" width="192" height="124" rx="10" fill="#315B62"/>
+    <text x="136" y="133" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">고객</text>
+    <text x="136" y="156" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">누가 사는가?</text>
   </g>
   <g id="value">
-    <rect x="40" y="189" width="400" height="78" rx="10" fill="#315B62"/>
-    <text x="240" y="224" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">가치</text>
-    <text x="240" y="247" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">왜 사는가</text>
+    <rect x="248" y="75" width="192" height="124" rx="10" fill="#315B62"/>
+    <text x="344" y="133" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">가치</text>
+    <text x="344" y="156" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">왜 사는가?</text>
   </g>
   <g id="delivery">
-    <rect x="40" y="303" width="400" height="78" rx="10" fill="#315B62"/>
-    <text x="240" y="338" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">전달방식</text>
-    <text x="240" y="361" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">어디에서 사는가</text>
+    <rect x="40" y="213" width="192" height="124" rx="10" fill="#315B62"/>
+    <text x="136" y="271" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">전달방식</text>
+    <text x="136" y="294" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">어디에서 사는가?</text>
   </g>
-  <g id="cost-competition">
-    <rect x="40" y="417" width="400" height="78" rx="10" fill="#315B62"/>
-    <text x="240" y="452" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">비용 · 경쟁</text>
-    <text x="240" y="475" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">무엇이 들고 누구와 비교되는가</text>
+  <g id="activities">
+    <rect x="248" y="213" width="192" height="124" rx="10" fill="#315B62"/>
+    <text x="344" y="259" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">활동</text>
+    <text x="344" y="283" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">우리는 무엇을</text>
+    <text x="344" y="306" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">해야 하는가?</text>
   </g>
-  <g id="price">
-    <rect x="40" y="531" width="400" height="100" rx="10" fill="#C49A5A"/>
-    <text x="240" y="577" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격</text>
-    <text x="240" y="600" text-anchor="middle" font-size="17" font-weight="400" fill="#252A30">정합성의 결과 · 포지셔닝 신호</text>
+  <g id="cost">
+    <rect x="40" y="351" width="192" height="124" rx="10" fill="#315B62"/>
+    <text x="136" y="397" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">비용</text>
+    <text x="136" y="421" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">그 일을 하는 데</text>
+    <text x="136" y="444" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">얼마가 드는가?</text>
+  </g>
+  <g id="competition">
+    <rect x="248" y="351" width="192" height="124" rx="10" fill="#315B62"/>
+    <text x="344" y="397" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">경쟁</text>
+    <text x="344" y="421" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">어떤 경쟁자와</text>
+    <text x="344" y="444" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">비교되는가?</text>
+  </g>
   </g>
   <g id="flow">
-    <line x1="240" y1="155" x2="240" y2="186" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
-    <line x1="240" y1="269" x2="240" y2="300" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
-    <line x1="240" y1="383" x2="240" y2="414" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
-    <line x1="240" y1="497" x2="240" y2="528" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <line x1="240" y1="477" x2="240" y2="520" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+  </g>
+  <g id="price">
+    <rect x="40" y="523" width="400" height="124" rx="10" fill="#C49A5A"/>
+    <text x="240" y="558" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격</text>
+    <text x="240" y="581" text-anchor="middle" font-size="17" font-weight="400" fill="#252A30">질문들에 대한 잠정적 답이</text>
+    <text x="240" y="604" text-anchor="middle" font-size="17" font-weight="400" fill="#252A30">수치로 모인 결과</text>
+    <text x="240" y="627" text-anchor="middle" font-size="17" font-weight="400" fill="#252A30">정합성의 기준 · 포지셔닝 신호</text>
   </g>
   <g id="caption">
-    <text x="240" y="675" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격은 다시 시장 인식을 강화한다</text>
+    <text x="240" y="691" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격은 다시 시장 인식을 강화한다</text>
   </g>
 </svg>

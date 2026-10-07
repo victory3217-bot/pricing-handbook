@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 792" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 956" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
   <title id="t">가격가설 검증 순환</title>
-  <desc id="d">가격가설을 네 요소로 검증하고 피드백으로 사업모델 가정을 수정한다.</desc>
+  <desc id="d">가격가설을 검증설계 4요소(조사검증대상, 측정지표, 방법 및 계획, 피드백데이터)로 검증한다. 피드백이 가정을 흔들었다면 원가구조, 가치기반 가격, 세그먼트·채널 중 해당 구성요소를 다시 열고, 업데이트한 뒤 다음 가설로 넘어간다.</desc>
   <defs>
     <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0 L10 5 L0 10 z" fill="#14253D"/>
@@ -10,7 +10,7 @@
     </marker>
   </defs>
   <g id="background">
-    <rect width="480" height="792" rx="14" fill="#F6F2EA"/>
+    <rect width="480" height="956" rx="14" fill="#F6F2EA"/>
   </g>
   <g id="headline">
     <text x="240" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#252A30">가격은 검증하고</text>
@@ -40,20 +40,28 @@
     <text x="230" y="595" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">4. 피드백데이터</text>
     <text x="230" y="618" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">어느 가정을 수정할 것인가?</text>
   </g>
+  <g id="reopen">
+    <rect x="40" y="674" width="380" height="128" rx="10" fill="#315B62"/>
+    <text x="230" y="709" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">흔들린 가정의</text>
+    <text x="230" y="736" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">구성요소를 다시 연다</text>
+    <text x="230" y="759" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">원가구조 · 가치기반 가격 ·</text>
+    <text x="230" y="782" text-anchor="middle" font-size="17" font-weight="400" fill="#F6F2EA">세그먼트 · 채널</text>
+  </g>
   <g id="flow">
     <line x1="230" y1="184" x2="230" y2="215" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
     <line x1="230" y1="298" x2="230" y2="329" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
     <line x1="230" y1="412" x2="230" y2="443" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
     <line x1="230" y1="526" x2="230" y2="557" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <line x1="230" y1="640" x2="230" y2="671" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
   </g>
   <g id="return-loop">
-    <path d="M420 599 H452 V142 H422" fill="none" stroke="#C49A5A" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow-gold)"/>
+    <path d="M420 738 H452 V142 H422" fill="none" stroke="#C49A5A" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow-gold)"/>
   </g>
   <g id="legend">
-    <line x1="40" y1="674" x2="84" y2="674" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
-    <text x="96" y="680" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">실선 화살표: 검증의 순서</text>
-    <line x1="40" y1="714" x2="84" y2="714" stroke="#C49A5A" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow-gold)"/>
-    <text x="96" y="720" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">점선 화살표: 가격 · 고객 · 가치 · 채널 ·</text>
-    <text x="96" y="742" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">원가 가정을 업데이트</text>
+    <line x1="40" y1="838" x2="84" y2="838" stroke="#14253D" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+    <text x="96" y="844" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">실선 화살표: 검증의 순서</text>
+    <line x1="40" y1="878" x2="84" y2="878" stroke="#C49A5A" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow-gold)"/>
+    <text x="96" y="884" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">점선 화살표: 업데이트한 뒤</text>
+    <text x="96" y="906" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">다음 가설로</text>
   </g>
 </svg>
