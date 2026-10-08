@@ -30,6 +30,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Pricing Strategy Handbook",
+      components: { Banner: "./src/components/HandbookBanner.astro" },
       customCss: ["./src/styles/custom.css"],
       defaultLocale: "en",
       locales: {

@@ -1,0 +1,36 @@
+---
+// Slim bar on every page that links back to the Magis Global handbook list,
+// so readers who arrive from magisglobal.co.kr can return to it.
+// Per-page `banner` frontmatter still works: the default Starlight banner renders below.
+import Default from '@astrojs/starlight/components/Banner.astro';
+import type { Props } from '@astrojs/starlight/props';
+
+const isKo = Astro.props.locale === 'ko';
+const href = `https://magisglobal.co.kr/${isKo ? 'ko' : 'en'}/handbooks/`;
+const label = isKo ? 'Magis Global 핸드북 목록으로 돌아가기' : 'Back to the Magis Global Handbooks';
+---
+
+<div class="mg-return-banner">
+	<a href={href}><span aria-hidden="true">←</span> {label}</a>
+</div>
+<Default {...Astro.props} />
+
+<style>
+	.mg-return-banner {
+		padding: 0.5rem var(--sl-nav-pad-x, 1rem);
+		background-color: #14253d;
+		text-align: center;
+		font-size: var(--sl-text-sm, 0.875rem);
+		line-height: 1.4;
+	}
+	.mg-return-banner a {
+		color: #ffffff;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.mg-return-banner a:hover,
+	.mg-return-banner a:focus-visible {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+</style>
