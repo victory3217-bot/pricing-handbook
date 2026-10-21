@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 744" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH09 Summary: Interpreting QCD and Projected P&amp;L, and Iterative Validation</title>
+  <desc id="d">QCD and projected P&amp;L are not scorecards; they are feedback that exposes assumptions requiring redesign. 1. Quality: Can we make what the target customer requires?. 2. Delivery: Can we supply at the needed scale and time?. 3. Cost: Can we do it at an affordable cost?. 4. Iterate: Fix failing assumptions and recalculate. Check question: If any one is blocked, did we revise the hypothesis?</desc>
+  <g id="background">
+    <rect width="480" height="744" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="104" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH09</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Interpreting QCD and Projected</text>
+    <text x="38" y="101" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">P&amp;L, and Iterative Validation</text>
+    <rect x="24" y="142" width="432" height="120" rx="10" fill="#315B62"/>
+    <text x="38" y="164" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">Key message</text>
+    <text x="38" y="186" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">QCD and projected P&amp;L are not</text>
+    <text x="38" y="210" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">scorecards; they are feedback that</text>
+    <text x="38" y="234" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">exposes assumptions requiring redesign.</text>
+    <rect x="24" y="276" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="320" r="15" fill="#C49A5A"/>
+    <text x="52" y="326" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="302" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Quality</text>
+    <text x="80" y="322" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Can we make what the</text>
+    <text x="80" y="343" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">target customer requires?</text>
+    <rect x="24" y="374" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="418" r="15" fill="#C49A5A"/>
+    <text x="52" y="424" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="400" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Delivery</text>
+    <text x="80" y="420" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Can we supply at the</text>
+    <text x="80" y="441" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">needed scale and time?</text>
+    <rect x="24" y="472" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="505.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="511.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="498" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Cost</text>
+    <text x="80" y="518" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Can we do it at an affordable cost?</text>
+    <rect x="24" y="549" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="582.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="588.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="575" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Iterate</text>
+    <text x="80" y="595" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Fix failing assumptions and recalculate</text>
+    <rect x="24" y="630" width="432" height="90" rx="10" fill="#C49A5A"/>
+    <text x="38" y="652" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">Check question</text>
+    <text x="38" y="670" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">If any one is blocked, did</text>
+    <text x="38" y="694" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">we revise the hypothesis?</text>
+  </g>
+</svg>

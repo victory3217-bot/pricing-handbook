@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 768" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH15 Summary: Validating Price Hypotheses and Making Decisions</title>
+  <desc id="d">Price is not a number calculated once and finalized; it is a living hypothesis continually tested and revised with market data. 1. Hypothesis: Write the price hypothesis as a sentence. 2. Target and metric: Decide what to test and which metric to read. 3. Method and plan: Plan how it will be checked. 4. Feedback: Keep, revise, or pivot based on data. Check question: Did we separate calculation from assumption?</desc>
+  <g id="background">
+    <rect width="480" height="768" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="104" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH15</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Validating Price Hypotheses</text>
+    <text x="38" y="101" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">and Making Decisions</text>
+    <rect x="24" y="142" width="432" height="144" rx="10" fill="#315B62"/>
+    <text x="38" y="164" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">Key message</text>
+    <text x="38" y="186" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">Price is not a number calculated</text>
+    <text x="38" y="210" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">once and finalized; it is a living</text>
+    <text x="38" y="234" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">hypothesis continually tested and</text>
+    <text x="38" y="258" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">revised with market data.</text>
+    <rect x="24" y="300" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="344" r="15" fill="#C49A5A"/>
+    <text x="52" y="350" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="326" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Hypothesis</text>
+    <text x="80" y="346" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Write the price</text>
+    <text x="80" y="367" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">hypothesis as a sentence</text>
+    <rect x="24" y="398" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="442" r="15" fill="#C49A5A"/>
+    <text x="52" y="448" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="424" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Target and metric</text>
+    <text x="80" y="444" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Decide what to test and</text>
+    <text x="80" y="465" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">which metric to read</text>
+    <rect x="24" y="496" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="529.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="535.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="522" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Method and plan</text>
+    <text x="80" y="542" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Plan how it will be checked</text>
+    <rect x="24" y="573" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="606.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="612.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="599" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Feedback</text>
+    <text x="80" y="619" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Keep, revise, or pivot based on data</text>
+    <rect x="24" y="654" width="432" height="90" rx="10" fill="#C49A5A"/>
+    <text x="38" y="676" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">Check question</text>
+    <text x="38" y="694" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Did we separate calculation</text>
+    <text x="38" y="718" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">from assumption?</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 717" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH02 Summary: Cost and Cost Structure</title>
+  <desc id="d">Cost does not begin in an accounting table; it is derived from the activities that create and deliver customer value. 1. Activities: The work that creates and delivers value. 2. Expenses: Collect what activities cost, item by item. 3. Classification: Direct/indirect and variable/fixed. 4. Cost: What one unit actually bears. Check question: Is the cost table tied to real activities?</desc>
+  <g id="background">
+    <rect width="480" height="717" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="77" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH02</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Cost and Cost Structure</text>
+    <rect x="24" y="115" width="432" height="120" rx="10" fill="#315B62"/>
+    <text x="38" y="137" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">Key message</text>
+    <text x="38" y="159" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">Cost does not begin in an accounting</text>
+    <text x="38" y="183" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">table; it is derived from the activities</text>
+    <text x="38" y="207" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">that create and deliver customer value.</text>
+    <rect x="24" y="249" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="293" r="15" fill="#C49A5A"/>
+    <text x="52" y="299" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="275" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Activities</text>
+    <text x="80" y="295" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">The work that creates</text>
+    <text x="80" y="316" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">and delivers value</text>
+    <rect x="24" y="347" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="391" r="15" fill="#C49A5A"/>
+    <text x="52" y="397" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="373" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Expenses</text>
+    <text x="80" y="393" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Collect what activities</text>
+    <text x="80" y="414" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">cost, item by item</text>
+    <rect x="24" y="445" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="478.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="484.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="471" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Classification</text>
+    <text x="80" y="491" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Direct/indirect and variable/fixed</text>
+    <rect x="24" y="522" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="555.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="561.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="548" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Cost</text>
+    <text x="80" y="568" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">What one unit actually bears</text>
+    <rect x="24" y="603" width="432" height="90" rx="10" fill="#C49A5A"/>
+    <text x="38" y="625" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">Check question</text>
+    <text x="38" y="643" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Is the cost table tied</text>
+    <text x="38" y="667" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">to real activities?</text>
+  </g>
+</svg>

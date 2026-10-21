@@ -62,7 +62,11 @@ flowchart LR
 
 ## Worksheets / Examples
 
-Every chapter includes one practical [worksheet](manual/) (15 total). [Examples](examples/) are included only where the source material (a Knowledge Module or a Pricing Harness CASE document) actually contains one (13 total) — no example was invented. Each example can also be used as an exercise: first work through the "Exercise" (or "Think it through") yourself, then check it with "Show answer and walkthrough". The questions were built only from the example's own figures and wording.
+Every chapter includes one practical [worksheet](manual/) (15 total). [Examples](examples/) are included only where the source material (a Knowledge Module or a Pricing Harness CASE document) actually contains one (29 total: the original 13 plus 16 added from the Standard Lecture Plan 3-1) — no example was invented. Figures in the examples taken from the Standard Lecture Plan are practice-only hypothetical data and were verified by calculation. Each example can also be used as an exercise: first work through the "Exercise" (or "Think it through") yourself, then check it with "Show answer and walkthrough". The questions were built only from the example's own figures and wording.
+
+## Standard Lecture Plan 3-1 Enrichment
+
+Each chapter (CH01–CH15) keeps §1–§9 unchanged and adds "10. Deep Dive: Standard Lecture Plan Enrichment" with the material the Standard Lecture Plan 3-1 decks added (supply and demand, price and channel structure, cost classification and allocation, three-case price structures, reading calculator status values, problem bank, and more), followed by a one-page summary card before §9. "Points that need confirmation" at the end of each section lists items the decks themselves did not confirm.
 
 ## Source Policy
 

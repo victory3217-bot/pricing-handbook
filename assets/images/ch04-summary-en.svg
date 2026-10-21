@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 771" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH04 Summary: How Channel and Customer Relationship Reshape Price Structure</title>
+  <desc id="d">A sustainable price must cover not only cost and margin, but also the costs of the channel and the customer relationship. 1. Target customer: A price presumes a specific customer. 2. Channel: Direct vs. indirect changes fees and margin. 3. Relationship cost: Acquisition, retention, repurchase. 4. Price structure: Does the target margin survive all of it?. Check question: Is margin left after fees and relationship costs?</desc>
+  <g id="background">
+    <rect width="480" height="771" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="131" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH04</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">How Channel and</text>
+    <text x="38" y="101" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Customer Relationship</text>
+    <text x="38" y="128" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Reshape Price Structure</text>
+    <rect x="24" y="169" width="432" height="120" rx="10" fill="#315B62"/>
+    <text x="38" y="191" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">Key message</text>
+    <text x="38" y="213" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">A sustainable price must cover not only</text>
+    <text x="38" y="237" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">cost and margin, but also the costs of</text>
+    <text x="38" y="261" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">the channel and the customer relationship.</text>
+    <rect x="24" y="303" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="336.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="342.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="329" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Target customer</text>
+    <text x="80" y="349" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">A price presumes a specific customer</text>
+    <rect x="24" y="380" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="424" r="15" fill="#C49A5A"/>
+    <text x="52" y="430" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="406" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Channel</text>
+    <text x="80" y="426" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Direct vs. indirect</text>
+    <text x="80" y="447" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">changes fees and margin</text>
+    <rect x="24" y="478" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="511.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="517.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="504" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Relationship cost</text>
+    <text x="80" y="524" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Acquisition, retention, repurchase</text>
+    <rect x="24" y="555" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="599" r="15" fill="#C49A5A"/>
+    <text x="52" y="605" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="581" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Price structure</text>
+    <text x="80" y="601" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Does the target margin</text>
+    <text x="80" y="622" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">survive all of it?</text>
+    <rect x="24" y="657" width="432" height="90" rx="10" fill="#C49A5A"/>
+    <text x="38" y="679" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">Check question</text>
+    <text x="38" y="697" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Is margin left after fees</text>
+    <text x="38" y="721" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">and relationship costs?</text>
+  </g>
+</svg>

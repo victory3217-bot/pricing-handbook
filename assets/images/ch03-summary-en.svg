@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 786" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH03 Summary: Two Logics of Pricing — Customer Value and Competition</title>
+  <desc id="d">A sound price reflects both the value customers recognize and the position chosen among alternatives. 1. Customer-value based: Confirm willingness to pay, then design the business case backward. 2. Competition based: Define the true competitors and compare price position. 3. Positioning: Price signals quality and brand position. 4. Honest limit: No standard procedure sets price floors and ceilings. Check question: Does my price match the intended position?</desc>
+  <g id="background">
+    <rect width="480" height="786" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="104" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH03</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Two Logics of Pricing —</text>
+    <text x="38" y="101" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">Customer Value and Competition</text>
+    <rect x="24" y="142" width="432" height="120" rx="10" fill="#315B62"/>
+    <text x="38" y="164" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">Key message</text>
+    <text x="38" y="186" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">A sound price reflects both the</text>
+    <text x="38" y="210" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">value customers recognize and the</text>
+    <text x="38" y="234" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">position chosen among alternatives.</text>
+    <rect x="24" y="276" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="320" r="15" fill="#C49A5A"/>
+    <text x="52" y="326" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="302" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Customer-value based</text>
+    <text x="80" y="322" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Confirm willingness to pay, then</text>
+    <text x="80" y="343" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">design the business case backward</text>
+    <rect x="24" y="374" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="418" r="15" fill="#C49A5A"/>
+    <text x="52" y="424" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="400" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Competition based</text>
+    <text x="80" y="420" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Define the true competitors</text>
+    <text x="80" y="441" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">and compare price position</text>
+    <rect x="24" y="472" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="516" r="15" fill="#C49A5A"/>
+    <text x="52" y="522" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="498" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Positioning</text>
+    <text x="80" y="518" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">Price signals quality</text>
+    <text x="80" y="539" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">and brand position</text>
+    <rect x="24" y="570" width="432" height="88" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="614" r="15" fill="#C49A5A"/>
+    <text x="52" y="620" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="596" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Honest limit</text>
+    <text x="80" y="616" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">No standard procedure sets</text>
+    <text x="80" y="637" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">price floors and ceilings</text>
+    <rect x="24" y="672" width="432" height="90" rx="10" fill="#C49A5A"/>
+    <text x="38" y="694" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">Check question</text>
+    <text x="38" y="712" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">Does my price match</text>
+    <text x="38" y="736" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">the intended position?</text>
+  </g>
+</svg>

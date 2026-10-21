@@ -9,6 +9,7 @@ const REPO = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = REPO + "/assets/images/";
 const C = { navy: "#14253D", teal: "#315B62", gold: "#C49A5A", ivory: "#F6F2EA", ink: "#252A30", white: "#FFFFFF" };
 const FONT = "system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif";
+let LANG = "ko";
 const W = 480, PAD = 24, BOX = W - PAD * 2;
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const cw = (ch, fs, bold) => (/[ᄀ-ᇿ㄰-㆏가-힯··—]/.test(ch) ? fs : fs * (bold ? 0.62 : 0.56));
@@ -28,7 +29,8 @@ function wrap(text, fs, maxW, bold = false) {
 function wrapOnce(text, fs, maxW, bold = false) {
   const lines = [];
   let cur = "";
-  for (const ch of text) {
+  const toks = LANG === "en" ? text.match(/\S+\s*/g) || [] : [...text];
+  for (const ch of toks) {
     if (width(cur + ch, fs, bold) > maxW && cur) { lines.push(cur.trimEnd()); cur = ch === " " ? "" : ch; } else cur += ch;
   }
   if (cur) lines.push(cur.trimEnd());
@@ -100,7 +102,72 @@ const CH = [
     ask: "계산 결과와 가정을 구분해 적었는가?" },
 ];
 
-for (const c of CH) {
+const CH_EN = [
+  { n: "01", title: "Price Is the Outcome of the Business Model",
+    msg: "Price is not a number added at the end; it is the outcome of a business model aligning customer, value, delivery, and cost.",
+    pts: [["Customer", "Who are we selling to?"], ["Value", "Why does the customer pay?"], ["Delivery", "Through which channel and method?"], ["Cost", "What does that delivery cost?"]],
+    ask: "Does this price fit all four?" },
+  { n: "02", title: "Cost and Cost Structure",
+    msg: "Cost does not begin in an accounting table; it is derived from the activities that create and deliver customer value.",
+    pts: [["Activities", "The work that creates and delivers value"], ["Expenses", "Collect what activities cost, item by item"], ["Classification", "Direct/indirect and variable/fixed"], ["Cost", "What one unit actually bears"]],
+    ask: "Is the cost table tied to real activities?" },
+  { n: "03", title: "Two Logics of Pricing — Customer Value and Competition",
+    msg: "A sound price reflects both the value customers recognize and the position chosen among alternatives.",
+    pts: [["Customer-value based", "Confirm willingness to pay, then design the business case backward"], ["Competition based", "Define the true competitors and compare price position"], ["Positioning", "Price signals quality and brand position"], ["Honest limit", "No standard procedure sets price floors and ceilings"]],
+    ask: "Does my price match the intended position?" },
+  { n: "04", title: "How Channel and Customer Relationship Reshape Price Structure",
+    msg: "A sustainable price must cover not only cost and margin, but also the costs of the channel and the customer relationship.",
+    pts: [["Target customer", "A price presumes a specific customer"], ["Channel", "Direct vs. indirect changes fees and margin"], ["Relationship cost", "Acquisition, retention, repurchase"], ["Price structure", "Does the target margin survive all of it?"]],
+    ask: "Is margin left after fees and relationship costs?" },
+  { n: "05", title: "Revenue Streams and Pricing Mechanisms",
+    msg: "A revenue model is not a price list; it defines who pays, for what, how much, when, and how repeatedly.",
+    pts: [["Who and for what", "The payer and the thing paid for"], ["How much", "Price and pricing mechanism"], ["When", "The timing of cash coming in"], ["Once or repeatedly", "One-time vs. recurring revenue"]],
+    ask: "Can we answer all five questions?" },
+  { n: "06", title: "The Three Financial Lenses and the Bridge to Business Feasibility",
+    msg: "Feasibility can be tested only after price P, the cost-and-margin structure, and the revenue model are defined.",
+    pts: [["Profit lens", "Revenue minus costs"], ["Asset lens", "Does the business raise asset value?"], ["Cash-flow lens", "When does cash actually move?"], ["Three inputs", "Price P, cost-and-margin structure, revenue model"]],
+    ask: "Are the three inputs defined?" },
+  { n: "07", title: "The Effective Market and My Market",
+    msg: "The effective market is not an arbitrary slice of the total market; it is the market the price and business model can realistically reach.",
+    pts: [["Total market", "The market that exists in theory"], ["Buyer-based", "Redefine around actual paying buyers"], ["Constraints", "Apply price and business-model limits"], ["Effective → my market", "The share I can actually reach"]],
+    ask: "Are any unsupported market numbers mixed in?" },
+  { n: "08", title: "From Qualitative to Quantitative — Effective Market Sizing and P×Qty",
+    msg: "A business model becomes an actionable market number, P×Qty, only after its assumptions pass a QCD reality check.",
+    pts: [["Qualitative", "The business model and its assumptions"], ["QCD check", "Quality, cost, delivery tested in reality"], ["P × Qty", "Turn the market into price times quantity"], ["By deal type", "B2C, B2B, B2G need different Qty evidence"]],
+    ask: "Can I explain the basis of Qty?" },
+  { n: "09", title: "Interpreting QCD and Projected P&L, and Iterative Validation",
+    msg: "QCD and projected P&L are not scorecards; they are feedback that exposes assumptions requiring redesign.",
+    pts: [["Quality", "Can we make what the target customer requires?"], ["Delivery", "Can we supply at the needed scale and time?"], ["Cost", "Can we do it at an affordable cost?"], ["Iterate", "Fix failing assumptions and recalculate"]],
+    ask: "If any one is blocked, did we revise the hypothesis?" },
+  { n: "10", title: "MODE A — Current Price Diagnosis",
+    msg: "Judge the health of the current price by contribution margin after variable selling and delivery costs, not by gross profit alone.",
+    pts: [["Inputs", "Price, tax, costs, unconfirmed items"], ["Gross profit", "Reflects direct cost only"], ["Contribution margin", "Also reflects variable selling and delivery"], ["Status values", "Read calculability and warnings first"]],
+    ask: "Are unconfirmed inputs shaking the result?" },
+  { n: "11", title: "MODE B — Target Price Reverse Calculation",
+    msg: "Target-price reverse calculation translates a desired margin into price and reveals whether the current cost structure can support it.",
+    pts: [["Target", "Set the target contribution margin rate t"], ["Cost types", "Fixed amount, net-sales rate, gross-payment rate"], ["Reverse calculate", "Find required net sales and displayed price"], ["Interpret", "Whether the market accepts it is a separate judgment"]],
+    ask: "Can we state where the target rate comes from?" },
+  { n: "12", title: "MODE C — Allowable Cost Reverse Calculation",
+    msg: "When the market price is fixed, reverse-calculate the maximum allowable cost and check its gap from actual cost.",
+    pts: [["Market price", "A selling price already fixed"], ["Target margin", "The contribution margin rate to protect"], ["Allowable cost", "Maximum direct cost that keeps that margin"], ["Gap", "Allowable cost vs. actual cost"]],
+    ask: "Does actual cost fit inside allowable cost?" },
+  { n: "13", title: "BEP — Break-Even Point",
+    msg: "A positive unit margin does not make a viable business unless the sales volume needed to recover fixed costs is achievable.",
+    pts: [["CMu", "Unit contribution margin = net sales − direct cost − variable cost"], ["FC", "Sum of fixed operating costs"], ["Q_BEP", "Break-even volume = FC ÷ CMu"], ["Volume profit", "Is there profit at the planned volume?"]],
+    ask: "Does planned volume exceed break-even volume?" },
+  { n: "14", title: "Scenario Compare",
+    msg: "Scenario comparison does not recommend the answer; it shows how changing one assumption alters the numbers against a common baseline.",
+    pts: [["Baseline", "Fix one baseline scenario"], ["Variation", "Layer only the changed values (override) on base"], ["Run", "Run the modes for each scenario and summarize"], ["Delta", "Read the change against the baseline"]],
+    ask: "Did we change only one assumption at a time?" },
+  { n: "15", title: "Validating Price Hypotheses and Making Decisions",
+    msg: "Price is not a number calculated once and finalized; it is a living hypothesis continually tested and revised with market data.",
+    pts: [["Hypothesis", "Write the price hypothesis as a sentence"], ["Target and metric", "Decide what to test and which metric to read"], ["Method and plan", "Plan how it will be checked"], ["Feedback", "Keep, revise, or pivot based on data"]],
+    ask: "Did we separate calculation from assumption?" },
+];
+
+function render(c, L) {
+  LANG = L;
+  const lab = L === "en" ? { msg: "Key message", ask: "Check question", sum: "Summary" } : { msg: "핵심 메시지", ask: "체크 질문", sum: "요약" };
   const body = [];
   let y = 24;
   // header
@@ -114,7 +181,7 @@ for (const c of CH) {
   const ml = wrap(c.msg, 17, BOX - 28);
   const mh = 16 + 20 + ml.length * 24 + 12;
   body.push(`    <rect x="${PAD}" y="${y}" width="${BOX}" height="${mh}" rx="10" fill="${C.teal}"/>`);
-  body.push(t(PAD + 14, y + 22, "핵심 메시지", 13, 700, C.gold));
+  body.push(t(PAD + 14, y + 22, lab.msg, 13, 700, C.gold));
   ml.forEach((l, i) => body.push(t(PAD + 14, y + 22 + 22 + i * 24, l, 17, 400, C.white)));
   y += mh + 14;
   // points
@@ -133,13 +200,13 @@ for (const c of CH) {
   const al = wrap(c.ask, 17, BOX - 28, true);
   const ah = 14 + al.length * 24 + 10 + 18;
   body.push(`    <rect x="${PAD}" y="${y}" width="${BOX}" height="${ah}" rx="10" fill="${C.gold}"/>`);
-  body.push(t(PAD + 14, y + 22, "체크 질문", 13, 700, C.ink));
+  body.push(t(PAD + 14, y + 22, lab.ask, 13, 700, C.ink));
   al.forEach((l, i) => body.push(t(PAD + 14, y + 22 + 24 + i * 24 - 6, l, 17, 700, C.ink)));
   y += ah + 24;
   const H = Math.round(y);
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t d" font-family="${FONT}">
-  <title id="t">${esc(`CH${c.n} 요약: ${c.title}`)}</title>
-  <desc id="d">${esc(`${c.msg} ${c.pts.map(([h, s], i) => `${i + 1}. ${h}: ${s}.`).join(" ")} 체크 질문: ${c.ask}`)}</desc>
+  <title id="t">${esc(`CH${c.n} ${lab.sum}: ${c.title}`)}</title>
+  <desc id="d">${esc(`${c.msg} ${c.pts.map(([h, s], i) => `${i + 1}. ${h}: ${s}.`).join(" ")} ${lab.ask}: ${c.ask}`)}</desc>
   <g id="background">
     <rect width="${W}" height="${H}" rx="14" fill="${C.ivory}"/>
   </g>
@@ -148,6 +215,8 @@ ${body.join("\n")}
   </g>
 </svg>
 `;
-  writeFileSync(OUT + `ch${c.n}-summary-ko.svg`, svg, "utf8");
+  writeFileSync(OUT + `ch${c.n}-summary-${L}.svg`, svg, "utf8");
 }
-console.log("wrote", CH.length, "summary SVGs");
+for (const c of CH) render(c, "ko");
+for (const c of CH_EN) render(c, "en");
+console.log("wrote", CH.length + CH_EN.length, "summary SVGs");
