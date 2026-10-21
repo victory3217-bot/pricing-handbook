@@ -28,3 +28,21 @@
 ## Coverage Note
 
 12 of 15 chapters are fully covered by their sources. Three chapters (CH03, CH05, CH15) state an honest, specific limitation where the source does not yet define a standard procedure or the tool does not yet implement a feature — these limitations are described plainly in the chapter text itself rather than filled in with invented content.
+
+## Standard Lecture Plan Layer (ko only, added in the upgrade)
+
+Section "10. 심화: 표준강의안 보강" in each Korean chapter draws on the Standard Lecture Plan 3-1 (Price & Revenue Model) decks, which themselves cite older lecture materials (2019–2021, 2023, 2025) and the N-15 problem set. The English edition does not include this layer yet.
+
+| Chapter | Deck(s) (SL) |
+|---|---|
+| CH01 | 3-1-01, 3-1-10 |
+| CH02 | 3-1-05 |
+| CH03 | 3-1-03 |
+| CH04 | 3-1-04, 3-1-06, 3-1-09 |
+| CH05 | 3-1-01 (D5), 3-1-03 (D2) |
+| CH06, CH07 | 3-1-07 |
+| CH08, CH09 | 3-1-08 |
+| CH10–CH12 | 3-1-14, 3-1-09, 3-1-02 |
+| CH13–CH15 | 3-1-14, 3-1-09, 3-1-10, 3-1-02, 3-1-12 |
+
+Items the decks mark as "확인 필요" are not asserted in the text; they are listed at the end of each §10.

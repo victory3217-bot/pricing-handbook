@@ -55,3 +55,30 @@
 ## Reused from business-planning-handbook (for consistency across handbooks)
 
 Effective Market, Projected P&L, Business Model, Value Proposition, Competitive Advantage, Positioning, User/Buyer/Payer, KBF (Key Buying Factor).
+
+## Added by the Standard Lecture Plan 3-1 layer (ko §10; English renderings are proposals, not yet used in `en/`)
+
+| Korean | English (proposed) | Notes |
+|---|---|---|
+| 균형가격 / 초과공급 / 초과수요 | Equilibrium price / Excess supply / Excess demand | CH03 |
+| 가격-품질 네 칸 | Price–quality four cells | CH03; cell placement needs checking against the source diagram |
+| 비교가격 | Comparative price | CH03 |
+| 가격 메커니즘 (고정가격·협상·물량단가·입찰) | Pricing mechanism | CH05 |
+| 권장 소비자가 / 공식가 | List price | CH04 |
+| 실판매가 | Sales price | CH04 |
+| 가격구조 / 채널구조 | Price Structure / Channel Structure | CH04 |
+| Cost plus / Sales minus / 키스톤 | Cost plus / Sales minus / Keystone | CH04, kept as-is |
+| 직매입 / 특정매입 | Outright purchase / Consignment-type purchase | CH04 |
+| 프로모션 재원 | Promotion fund | CH04 |
+| 재고가능원가 / 기간원가 | Inventoriable cost / Period cost | CH02 |
+| 제조간접비 / 배부 / 배부 기준 | Manufacturing overhead / Allocation / Allocation basis | CH02 |
+| 월 최소 판매 목표 | Monthly minimum sales target | CH01, CH13 |
+| 세 재무 렌즈: 손익·자산·현금흐름 관점 | Income / Asset / Cash-flow lens | CH06 |
+| 시장 경계 / 시장 상한 | Market boundary / Market cap (budget cap) | CH07, CH08 |
+| 상태값 (INCOMPLETE, NOT_APPLICABLE, NOT_RUN, NOT_IMPLEMENTED) | Status values | CH10; tool terms, kept as-is |
+| 구성요소 / 공유비용 / 배분 규칙 | Price component / Shared cost / Allocation rule | CH10 |
+| 실지급액 기준 / 순매출 기준 | Rate on gross payment / Rate on net sales | CH10 |
+| 안전한계 / 안전한계율 | Margin of safety / Margin of safety rate | CH13 |
+| 관찰된 범위 | Observed range | CH15 |
+
+Open terminology issue: whether "변동비" includes materials (accounting view, CH02) or only selling/delivery cost (calculator `variable_selling_delivery`, CH10) — recorded side by side in CH02 §10, not resolved.
