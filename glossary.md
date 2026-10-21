@@ -80,5 +80,14 @@ Effective Market, Projected P&L, Business Model, Value Proposition, Competitive 
 | 실지급액 기준 / 순매출 기준 | Rate on gross payment / Rate on net sales | CH10 |
 | 안전한계 / 안전한계율 | Margin of safety / Margin of safety rate | CH13 |
 | 관찰된 범위 | Observed range | CH15 |
+| 재고불가능원가 | Non-inventoriable cost | CH02; same as period cost |
+| 한 칸의 식 (CH01) | Three-Slot Formula | CH01; translator's coinage, used in en CH01 §10 |
+| 이행 체크리스트 | Implementation Checklist | CH06; translator's coinage |
+| Qty 근거표 | Qty evidence table | CH08; translator's coinage |
+| QCD 점검서 | QCD review sheet | CH09; translator's coinage |
+| 시장 경계 메모 | Market boundary memo | CH07; translator's coinage |
+| 유지 판매량 | Maintenance sales quantity | CH14; a lecture term, not a handbook definition |
+| 판정문 / 숫자 라벨 | Verdict sentence / Number labels | CH15; proposals from the lecture plan |
+| 조사검증대상 | Research and verification target | CH15; one of the four validation-design elements |
 
 Open terminology issue: whether "변동비" includes materials (accounting view, CH02) or only selling/delivery cost (calculator `variable_selling_delivery`, CH10) — recorded side by side in CH02 §10, not resolved.
