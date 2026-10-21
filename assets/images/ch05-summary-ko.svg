@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 651" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH05 요약: 수익원과 가격 메커니즘</title>
+  <desc id="d">수익모델은 가격표가 아니라 누가·무엇에·얼마를·언제·얼마나 반복해서 지불하는지를 설계하는 일이다. 1. 누가 · 무엇에: 돈을 내는 사람과 그 대상. 2. 얼마를: 가격과 가격 메커니즘. 3. 언제: 돈이 들어오는 시점. 4. 한 번 · 반복: 단발성 수익과 반복적 수익. 체크 질문: 다섯 질문에 모두 답할 수 있는가?</desc>
+  <g id="background">
+    <rect width="480" height="651" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="77" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH05</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">수익원과 가격 메커니즘</text>
+    <rect x="24" y="115" width="432" height="120" rx="10" fill="#315B62"/>
+    <text x="38" y="137" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">핵심 메시지</text>
+    <text x="38" y="159" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">수익모델은 가격표가 아니라 누가·</text>
+    <text x="38" y="183" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">무엇에·얼마를·언제·얼마나 반복</text>
+    <text x="38" y="207" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">해서 지불하는지를 설계하는 일이다.</text>
+    <rect x="24" y="249" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="282.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="288.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="275" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">누가 · 무엇에</text>
+    <text x="80" y="295" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">돈을 내는 사람과 그 대상</text>
+    <rect x="24" y="326" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="359.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="365.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="352" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">얼마를</text>
+    <text x="80" y="372" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">가격과 가격 메커니즘</text>
+    <rect x="24" y="403" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="436.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="442.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="429" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">언제</text>
+    <text x="80" y="449" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">돈이 들어오는 시점</text>
+    <rect x="24" y="480" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="513.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="519.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="506" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">한 번 · 반복</text>
+    <text x="80" y="526" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">단발성 수익과 반복적 수익</text>
+    <rect x="24" y="561" width="432" height="66" rx="10" fill="#C49A5A"/>
+    <text x="38" y="583" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">체크 질문</text>
+    <text x="38" y="601" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">다섯 질문에 모두 답할 수 있는가?</text>
+  </g>
+</svg>

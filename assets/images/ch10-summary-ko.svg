@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 627" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH10 요약: MODE A — 현재가격 진단</title>
+  <desc id="d">현재가격의 건강성은 매출총이익이 아니라 판매·배송 변동비까지 뺀 공헌이익으로 확인해야 한다. 1. 입력: 가격 · 세금 · 비용 · 미확정 항목. 2. 매출총이익: 직접원가까지만 반영. 3. 공헌이익: 판매·배송 변동비까지 반영. 4. 상태값: 계산 가능 여부와 경고를 먼저 읽는다. 체크 질문: 미확정 입력이 결과를 흔들고 있지 않은가?</desc>
+  <g id="background">
+    <rect width="480" height="627" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="77" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH10</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">MODE A — 현재가격 진단</text>
+    <rect x="24" y="115" width="432" height="96" rx="10" fill="#315B62"/>
+    <text x="38" y="137" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">핵심 메시지</text>
+    <text x="38" y="159" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">현재가격의 건강성은 매출총이익이 아니라 판매·</text>
+    <text x="38" y="183" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">배송 변동비까지 뺀 공헌이익으로 확인해야 한다.</text>
+    <rect x="24" y="225" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="258.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="264.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="251" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">입력</text>
+    <text x="80" y="271" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">가격 · 세금 · 비용 · 미확정 항목</text>
+    <rect x="24" y="302" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="335.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="341.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="328" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">매출총이익</text>
+    <text x="80" y="348" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">직접원가까지만 반영</text>
+    <rect x="24" y="379" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="412.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="418.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="405" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">공헌이익</text>
+    <text x="80" y="425" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">판매·배송 변동비까지 반영</text>
+    <rect x="24" y="456" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="489.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="495.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="482" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">상태값</text>
+    <text x="80" y="502" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">계산 가능 여부와 경고를 먼저 읽는다</text>
+    <rect x="24" y="537" width="432" height="66" rx="10" fill="#C49A5A"/>
+    <text x="38" y="559" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">체크 질문</text>
+    <text x="38" y="577" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">미확정 입력이 결과를 흔들고 있지 않은가?</text>
+  </g>
+</svg>

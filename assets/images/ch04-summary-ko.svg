@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 627" role="img" aria-labelledby="t d" font-family="system-ui, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <title id="t">CH04 요약: 채널과 고객관계가 바꾸는 가격구조</title>
+  <desc id="d">지속 가능한 가격은 원가와 마진뿐 아니라 채널비용과 고객관계 비용까지 감당해야 한다. 1. 목표 고객: 가격은 특정 고객을 전제로 한다. 2. 채널: 직접·간접 선택이 수수료와 이익률을 바꾼다. 3. 고객관계 비용: 획득·유지·재구매에 드는 비용. 4. 가격구조: 모두 반영해도 목표 마진이 남는지 확인. 체크 질문: 수수료와 관계비용을 빼고도 마진이 남는가?</desc>
+  <g id="background">
+    <rect width="480" height="627" rx="14" fill="#F6F2EA"/>
+  </g>
+  <g id="summary">
+    <rect x="24" y="24" width="432" height="77" rx="10" fill="#14253D"/>
+    <text x="38" y="50" text-anchor="start" font-size="14" font-weight="700" fill="#C49A5A">CH04</text>
+    <text x="38" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#FFFFFF">채널과 고객관계가 바꾸는 가격구조</text>
+    <rect x="24" y="115" width="432" height="96" rx="10" fill="#315B62"/>
+    <text x="38" y="137" text-anchor="start" font-size="13" font-weight="700" fill="#C49A5A">핵심 메시지</text>
+    <text x="38" y="159" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">지속 가능한 가격은 원가와 마진뿐 아니라 채</text>
+    <text x="38" y="183" text-anchor="start" font-size="17" font-weight="400" fill="#FFFFFF">널비용과 고객관계 비용까지 감당해야 한다.</text>
+    <rect x="24" y="225" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="258.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="264.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">1</text>
+    <text x="80" y="251" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">목표 고객</text>
+    <text x="80" y="271" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">가격은 특정 고객을 전제로 한다</text>
+    <rect x="24" y="302" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="335.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="341.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">2</text>
+    <text x="80" y="328" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">채널</text>
+    <text x="80" y="348" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">직접·간접 선택이 수수료와 이익률을 바꾼다</text>
+    <rect x="24" y="379" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="412.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="418.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">3</text>
+    <text x="80" y="405" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">고객관계 비용</text>
+    <text x="80" y="425" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">획득·유지·재구매에 드는 비용</text>
+    <rect x="24" y="456" width="432" height="67" rx="10" fill="#FFFFFF" stroke="#315B62" stroke-width="1.5"/>
+    <circle cx="52" cy="489.5" r="15" fill="#C49A5A"/>
+    <text x="52" y="495.5" text-anchor="middle" font-size="17" font-weight="700" fill="#252A30">4</text>
+    <text x="80" y="482" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">가격구조</text>
+    <text x="80" y="502" text-anchor="start" font-size="16" font-weight="400" fill="#252A30">모두 반영해도 목표 마진이 남는지 확인</text>
+    <rect x="24" y="537" width="432" height="66" rx="10" fill="#C49A5A"/>
+    <text x="38" y="559" text-anchor="start" font-size="13" font-weight="700" fill="#252A30">체크 질문</text>
+    <text x="38" y="577" text-anchor="start" font-size="17" font-weight="700" fill="#252A30">수수료와 관계비용을 빼고도 마진이 남는가?</text>
+  </g>
+</svg>
