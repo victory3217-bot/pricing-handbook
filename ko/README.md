@@ -1,4 +1,4 @@
-# Pricing Strategy Handbook v0.1 (한국어)
+# Pricing Strategy Handbook v0.2 (한국어)
 
 > [🇺🇸 Read in English](../en/README.md) · [⬅ 메인으로](../README.md)
 
@@ -82,4 +82,4 @@ flowchart LR
 
 ## 버전
 
-**v0.1** — Human Review를 거친 Korean Private Release Candidate. 아직 공개되지 않았다.
+**v0.2** — v0.1(Human Review를 거친 Korean Private Release Candidate)에 표준강의안 3-1 반영분(챕터별 §10, 예시 16개, 요약 카드)을 더했다. 추가분은 아직 사람이 검토하지 않았다.

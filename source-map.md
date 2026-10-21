@@ -1,4 +1,4 @@
-# Source Map (Public / Bilingual) — Pricing Strategy Handbook v0.1
+# Source Map (Public / Bilingual) — Pricing Strategy Handbook v0.2
 
 > Shows which Knowledge Source and which Tool Source each chapter draws on. Applies to both `ko/` and `en/` — the English chapters are direct translations of the Korean chapters listed below and cite the same sources. Internal operating metadata (gap tracking, source-conflict resolution notes, non-public classifications) is intentionally not reproduced here — see the private review documents for that detail.
 

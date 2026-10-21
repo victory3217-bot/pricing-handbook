@@ -1,8 +1,8 @@
-# Pricing Strategy Handbook — v0.1
-# 가격전략 교재 — v0.1
+# Pricing Strategy Handbook — v0.2
+# 가격전략 교재 — v0.2
 
-> **Status: v0.1 Bilingual Release Candidate, human-reviewed.**
-> **상태: v0.1 사람이 검토한 Bilingual Release Candidate.**
+> **Status: v0.2 Bilingual Release Candidate. The v0.1 text (§1–§9) was human-reviewed; the v0.2 additions (§10 deep dives, 16 new examples, summary cards) have not yet been human-reviewed.**
+> **상태: v0.2 Bilingual Release Candidate. v0.1 본문(§1–§9)은 사람이 검토했고, v0.2 추가분(§10 심화, 새 예시 16개, 요약 카드)은 아직 사람이 검토하지 않았다.**
 
 A practical pricing handbook that combines a Knowledge Source (pricing-strategy theory) and a Tool Source (the Pricing Harness execution engine) into one canonical work.
 
@@ -95,5 +95,5 @@ flowchart LR
 
 ## Version / 버전
 
-**v0.1** — Human-reviewed Bilingual Release Candidate.
-**v0.1** — 사람이 검토한 Bilingual Release Candidate.
+**v0.2** — Adds the Standard Lecture Plan 3-1 layer (§10 per chapter, 16 examples, summary cards) to v0.1; the additions are not yet human-reviewed.
+**v0.2** — v0.1에 표준강의안 3-1 반영분(챕터별 §10, 예시 16개, 요약 카드)을 더했다. 추가분은 아직 사람이 검토하지 않았다.

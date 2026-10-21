@@ -1,4 +1,4 @@
-# Glossary — Pricing Strategy Handbook v0.1
+# Glossary — Pricing Strategy Handbook v0.2
 
 > Korean ↔ English terminology actually used in this handbook, confirmed during the English translation pass. No new concepts are introduced here — this only records the mapping.
 

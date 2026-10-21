@@ -1,4 +1,4 @@
-# Pricing Strategy Handbook v0.1 (English)
+# Pricing Strategy Handbook v0.2 (English)
 
 > [🇰🇷 한국어로 읽기](../ko/README.md) · [⬅ Back to main](../README.md)
 
@@ -82,4 +82,4 @@ A few chapters (CH03, CH05, CH15) include areas the source material or tool does
 
 ## Version
 
-**v0.1** — Korean Private Release Candidate, human-reviewed and approved; this English edition is its direct, unabridged translation. Not yet published.
+**v0.2** — v0.1 (Korean Private Release Candidate, human-reviewed and approved) plus the Standard Lecture Plan 3-1 layer (§10 per chapter, 16 examples, summary cards); the additions are not yet human-reviewed. This English edition is the direct, unabridged translation of the Korean edition.
