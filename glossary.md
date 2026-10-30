@@ -56,7 +56,7 @@
 
 Effective Market, Projected P&L, Business Model, Value Proposition, Competitive Advantage, Positioning, User/Buyer/Payer, KBF (Key Buying Factor).
 
-## Added by the Standard Lecture Plan 3-1 layer (ko §10; English renderings are proposals, not yet used in `en/`)
+## Added by the Standard Lecture Plan 3-1 layer (ko §10; most English renderings are already used in the `en/` §10 "Deep Dive: Standard Lecture Plan Enrichment" sections; rows noted as proposals remain proposals)
 
 | Korean | English (proposed) | Notes |
 |---|---|---|
