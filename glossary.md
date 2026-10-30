@@ -89,5 +89,6 @@ Effective Market, Projected P&L, Business Model, Value Proposition, Competitive 
 | 유지 판매량 | Maintenance sales quantity | CH14; a lecture term, not a handbook definition |
 | 판정문 / 숫자 라벨 | Verdict sentence / Number labels | CH15; proposals from the lecture plan |
 | 조사검증대상 | Research and verification target | CH15; one of the four validation-design elements |
+| 마진율 (판매관리비까지 뺀 이익 / 실판매가) | Operating margin | CH04 comparison table; profit after SG&A divided by Sales price. 공헌이익률 아님 (not Contribution Margin rate), and not Gross Profit margin. The ko term 마진율 is unchanged |
 
 Open terminology issue: whether "변동비" includes materials (accounting view, CH02) or only selling/delivery cost (calculator `variable_selling_delivery`, CH10) — recorded side by side in CH02 §10, not resolved.
