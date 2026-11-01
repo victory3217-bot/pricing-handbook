@@ -56,7 +56,7 @@
 
 Effective Market, Projected P&L, Business Model, Value Proposition, Competitive Advantage, Positioning, User/Buyer/Payer, KBF (Key Buying Factor).
 
-## Added by the Standard Lecture Plan 3-1 layer (ko §10; English renderings are proposals, not yet used in `en/`)
+## Added by the Standard Lecture Plan 3-1 layer (ko §10; most English renderings are already used in the `en/` §10 "Deep Dive: Standard Lecture Plan Enrichment" sections; rows noted as proposals remain proposals)
 
 | Korean | English (proposed) | Notes |
 |---|---|---|
@@ -89,5 +89,7 @@ Effective Market, Projected P&L, Business Model, Value Proposition, Competitive 
 | 유지 판매량 | Maintenance sales quantity | CH14; a lecture term, not a handbook definition |
 | 판정문 / 숫자 라벨 | Verdict sentence / Number labels | CH15; proposals from the lecture plan |
 | 조사검증대상 | Research and verification target | CH15; one of the four validation-design elements |
+| 마진율 (판매관리비까지 뺀 이익 / 실판매가) | Operating margin | CH04 comparison table; profit after SG&A divided by Sales price. 공헌이익률 아님 (not Contribution Margin rate), and not Gross Profit margin. The ko term 마진율 is unchanged |
+| 유지·수정·폐기 | Keep / Revise / Discard | CH15; verdict vocabulary for a price option or the whole business. A single hypothesis is judged 지지·수정·폐기, and a supported hypothesis is kept (business-planning handbook CH08). English follows the CH15 en wording "keep, revise, or discard" (Modify not used) |
 
 Open terminology issue: whether "변동비" includes materials (accounting view, CH02) or only selling/delivery cost (calculator `variable_selling_delivery`, CH10) — recorded side by side in CH02 §10, not resolved.

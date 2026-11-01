@@ -29,9 +29,9 @@
 
 12 of 15 chapters are fully covered by their sources. Three chapters (CH03, CH05, CH15) state an honest, specific limitation where the source does not yet define a standard procedure or the tool does not yet implement a feature — these limitations are described plainly in the chapter text itself rather than filled in with invented content.
 
-## Standard Lecture Plan Layer (ko only, added in the upgrade)
+## Standard Lecture Plan Layer (ko and en, added in the upgrade)
 
-Section "10. 심화: 표준강의안 보강" in each Korean chapter draws on the Standard Lecture Plan 3-1 (Price & Revenue Model) decks, which themselves cite older lecture materials (2019–2021, 2023, 2025) and the N-15 problem set. The English edition does not include this layer yet.
+Section "10. 심화: 표준강의안 보강" in each Korean chapter draws on the Standard Lecture Plan 3-1 (Price & Revenue Model) decks, which themselves cite older lecture materials (2019–2021, 2023, 2025) and the N-15 problem set. The English edition carries the same layer as "10. Deep Dive: Standard Lecture Plan Enrichment" in each of its 15 chapters.
 
 | Chapter | Deck(s) (SL) |
 |---|---|
