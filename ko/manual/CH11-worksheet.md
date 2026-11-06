@@ -1,5 +1,7 @@
 # CH11 MODE B 목표 CM율 설정 워크시트
 
+> **활용 안내:** 고객사 실제 상품 데이터를 사용할 때는 입력해도 되는 자료의 보안 범위를 교육 전에 고객사 HRD·IT 보안 담당자와 협의한다. 협의 전에는 가상 샘플 데이터로 작성한다.
+
 > 관련 Chapter: CH11 — MODE B 목표가격 역산
 > 근거: docs/features/mode_b_target_price/SPEC.md (Pricing Harness Internal Specification, Category B)
 

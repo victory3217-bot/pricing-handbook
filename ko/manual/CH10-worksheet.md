@@ -1,5 +1,7 @@
 # CH10 MODE A 입력 체크리스트
 
+> **활용 안내:** 고객사 실제 상품 데이터를 사용할 때는 입력해도 되는 자료의 보안 범위를 교육 전에 고객사 HRD·IT 보안 담당자와 협의한다. 협의 전에는 가상 샘플 데이터로 작성한다.
+
 > 관련 Chapter: CH10 (MODE A — 현재가격 진단)
 > 관련 Tool: MODE A (`core/engine/modes/mode_a.py`, `run_mode_a`)
 > 목적: MODE A를 실행하기 전, `product.price_components[]`의 각 component마다 SPEC.md가 요구하는 입력값이 실제로 확보되어 있는지 확인하는 체크리스트. 이 문서에 없는 입력 항목을 임의로 추가하지 않는다.
