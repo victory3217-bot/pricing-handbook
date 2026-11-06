@@ -1,5 +1,7 @@
 # CH08 P×Qty Derivation Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Related Chapter: CH08. From Qualitative to Quantitative — Effective Market Sizing and P×Qty
 > Related MN/KM: MN07 / KM058, KM059, KM062
 

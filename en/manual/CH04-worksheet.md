@@ -1,5 +1,7 @@
 # CH04 Channel & Customer Relationship Cost Checklist Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Related Chapter: CH04. How Channel and Customer Relationship Reshape Price Structure
 > Basis: KM048 (Channel and Price Structure), KM049 (Customer Relationship Cost) / primary_note: MN06
 

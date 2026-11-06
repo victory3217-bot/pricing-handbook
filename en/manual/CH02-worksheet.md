@@ -1,5 +1,7 @@
 # CH02 Activity-to-Cost Mapping Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Basis: KM044 (Estimating Cost from Activities), KM045 (Basic Cost Structure) / primary_note: MN06
 > This worksheet converts the activity/cost items and cost-structure questions that actually appear in KM044 and KM045 directly into a fill-in-the-blank format. No new items or frameworks have been added.
 

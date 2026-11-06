@@ -1,5 +1,7 @@
 # CH10 MODE A Input Checklist
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Related Chapter: CH10 (MODE A — Current Price Diagnosis)
 > Related Tool: MODE A (`core/engine/modes/mode_a.py`, `run_mode_a`)
 > Purpose: A checklist for confirming, before running MODE A, that the inputs SPEC.md requires for each component in `product.price_components[]` are actually available. Do not add input items that are not on this list.

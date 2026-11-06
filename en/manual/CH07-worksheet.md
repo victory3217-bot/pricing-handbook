@@ -1,5 +1,7 @@
 # CH07 Market Boundary Redefinition Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > This worksheet carries over the core questions from KM055, KM056, and KM057 as-is into a fill-in format. No new framework has been added.
 
 ## Source Map

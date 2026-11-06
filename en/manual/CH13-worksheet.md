@@ -1,5 +1,7 @@
 # CH13 BEP Calculation Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 This worksheet follows exactly the input/output structure for the BEP (Break-Even Point) calculation as defined by `docs/features/bep/SPEC.md`. It includes only the fields actually defined in SPEC.md, and should be filled in the order below for practical use.
 
 ## 0. Preliminary Check — Number of Components

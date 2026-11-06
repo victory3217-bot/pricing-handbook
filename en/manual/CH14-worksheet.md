@@ -1,5 +1,7 @@
 # CH14 Scenario Design Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > This worksheet follows Scenario Compare's request structure (`scenario_compare_request`, SPEC.md §4/§19) as-is. Do not add items that are not in the schema.
 
 ## 1. Base Input (Baseline Scenario)

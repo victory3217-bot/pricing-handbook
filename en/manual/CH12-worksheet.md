@@ -1,5 +1,7 @@
 # CH12 MODE C Allowable Cost Calculation Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Related Chapter: CH12. MODE C — Allowable Cost Reverse Calculation
 > Related Tool: MODE C (`core/engine/modes/mode_c.py`, `run_mode_c`)
 > Source: docs/features/mode_c_allowable_cost/SPEC.md (Client Input items §1, symbols §2, output metrics §12)

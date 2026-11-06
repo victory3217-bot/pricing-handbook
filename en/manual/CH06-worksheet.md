@@ -1,5 +1,7 @@
 # CH06 MN06→MN07 Transition Checklist
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > This worksheet is based on KM053 (The Three Financial Lenses) and KM054 (From Price to Business Feasibility). Before moving to the next step (Part II, MN07: Business Feasibility / Serviceable Market Estimation), fill in the items below to check yourself.
 
 ## Part A. Revisiting the Business Through the Three Financial Lenses (KM053)

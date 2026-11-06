@@ -1,5 +1,7 @@
 # CH11 MODE B Target CM Rate Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Related Chapter: CH11 — MODE B Target Price Reverse Calculation
 > Basis: docs/features/mode_b_target_price/SPEC.md (Pricing Harness Internal Specification, Category B)
 

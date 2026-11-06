@@ -1,5 +1,7 @@
 # CH09 QCD Executability Check Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > This worksheet carries over the question structure of KM060 (QCD and Executability) and KM061 (the Difference Between Projected P&L and Effective Market) as-is, and does not add a new framework.
 
 ## 1. QCD Check (KM060)

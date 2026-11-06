@@ -1,5 +1,7 @@
 # CH01 Pricing Prerequisite Checklist Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 This worksheet is for checking, before discussing Price, the prerequisites that need to be confirmed from the perspective in KM043 that "Price is the outcome of the business model." It introduces no new framework, and uses only the questions and logic of CH01's body text and its underlying sources, KM043, KM018, KM019, KM020, KM031, and KM047.
 
 ## A. Confirming Prerequisites (What Should Already Be Organized)

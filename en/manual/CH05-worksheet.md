@@ -1,5 +1,7 @@
 # CH05 Revenue Model / Pricing Mechanism Design Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > This worksheet converts the questions from KM050, KM051, and KM052 directly into a fill-in-the-blank format. No new framework has been added.
 
 ## Target Product/Service

@@ -1,5 +1,7 @@
 # CH15 Worksheet — The Four Elements of Price Validation Design
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > Source: KM066 "The Four Elements of Validation Design" (primary_note: MN08) — what to verify, metric, method and plan, feedback data.
 > This worksheet is for turning one price hypothesis into a testable experiment. The current Pricing Harness has no dedicated feature for storing or tracking this record (see CH15, Section 6), so manage it through this document or an equivalent separate record.
 

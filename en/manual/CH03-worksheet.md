@@ -1,5 +1,7 @@
 # CH03 Value vs. Competition Pricing Positioning Worksheet
 
+> **How to use:** If you use a client's actual product data, agree on the permitted security scope with the client's HRD and IT security contacts before the session. Until then, work with sample data.
+
 > This worksheet is based on KM046 (Value-Based Pricing) and KM047 (Competition-Based Pricing and Positioning). It does not include a new framework or a separate formula for calculating the price ceiling/floor. That procedure is not yet standardized in this Knowledge Source either.
 
 ## Part 1. Value-Based Pricing (KM046)

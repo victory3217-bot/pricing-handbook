@@ -8,7 +8,22 @@ A practical handbook that treats pricing not as a single number decision but as 
 
 ## Target Audience
 
-Founders, consultants, and business planners who want to learn pricing strategy systematically. No specific industry experience is assumed.
+Corporate product-planning and merchandising (MD) staff, sales and marketing staff, and business-unit and strategy-planning staff. Consultants and business planners who want to learn pricing strategy systematically can read it too. No specific industry experience is assumed.
+
+## Using This Handbook as a Corporate Training Course: Pricing Strategy Practice Course
+
+The handbook serves as the textbook for the corporate HRD course **"Pricing Strategy Practice."** Each chapter is one 90-minute module, and the module number equals the chapter number (CH10 = M10). Every chapter opens with a "Training module M# · 90 minutes" label, and CH10–CH15 also link to the [Pricing Calculator](https://victory3217-bot.github.io/pricing-harness/calculator/?lang=en).
+
+| Package | Duration | Modules |
+|---|---|---|
+| Pricing diagnosis lecture | Half day | M1 · M10 |
+| Practice course | 1 day | M2 · M4 · M10 · M13 |
+| Calculator intensive course | 1.5 days | M10 – M15 |
+| Full course | 3 days | M1 – M15 |
+
+- When a client's actual product data is used in worksheets or the calculator, the security scope is agreed in advance.
+- Training proposal (PDF, Korean): [마지스글로벌_가격전략실무과정_제안서.pdf](https://www.magisglobal.co.kr/files/proposals/%EB%A7%88%EC%A7%80%EC%8A%A4%EA%B8%80%EB%A1%9C%EB%B2%8C_%EA%B0%80%EA%B2%A9%EC%A0%84%EB%9E%B5%EC%8B%A4%EB%AC%B4%EA%B3%BC%EC%A0%95_%EC%A0%9C%EC%95%88%EC%84%9C.pdf) (linked once the file is uploaded)
+- Course information: [Magis Global handbooks](https://www.magisglobal.co.kr/en/handbooks/#course-pricing-strategy)
 
 ## Where This Handbook Sits
 
