@@ -40,20 +40,9 @@ export default defineConfig({
       sidebar: [
         ...chapterSidebar,
         {
-          label: "Worksheets & Examples",
-          translations: { ko: "워크시트 & 사례" },
-          items: [
-            {
-              label: "Worksheets",
-              translations: { ko: "워크시트" },
-              autogenerate: { directory: "manual" },
-            },
-            {
-              label: "Examples",
-              translations: { ko: "사례" },
-              autogenerate: { directory: "examples" },
-            },
-          ],
+          label: "Worksheets",
+          translations: { ko: "워크시트" },
+          autogenerate: { directory: "manual" },
         },
       ],
     }),

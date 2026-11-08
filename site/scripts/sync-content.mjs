@@ -88,6 +88,8 @@ if (existsSync(IMAGES_SRC)) {
 }
 
 function rewriteAssetLinks(body) {
+  // The Examples section is no longer published: keep the label, drop the link.
+  body = body.replace(/\[([^\]]+)\]\((?:\.\.\/|\.\/)?examples\/[^)]*\)/g, "$1");
   return body.replace(/\]\((?:\.\.\/)+assets\/images\//g, `](${BASE}images/`);
 }
 
@@ -143,20 +145,6 @@ for (const locale of LOCALES) {
     mkdirSync(join(WORKSHEETS_OUT, locale), { recursive: true });
     writeFileSync(join(WORKSHEETS_OUT, locale, file), raw, "utf8");
   }
-
-  // Examples
-  let eOrder = 1;
-  for (const file of listDir(locale, "examples")) {
-    const raw = readSource(locale, "examples", file);
-    const ch = (file.match(/CH\d\d/) || [file])[0];
-    const fallback = file.replace(/\.md$/, "");
-    const { title, body } = extractTitle(raw, fallback);
-    writeGenerated(
-      join(OUT_ROOT, locale, "examples", file),
-      { title, sidebar: { order: eOrder++ } },
-      body
-    );
-  }
 }
 
 // Locale landing pages (index) — generated from the same H1s used for the
@@ -189,14 +177,14 @@ const PART_HEADINGS = {
 const LANDING = {
   ko: {
     title: "Pricing Strategy Handbook",
-    intro: `가격전략과 Pricing Harness 실행 도구를 하나로 결합한 15개 Chapter 핸드북입니다. 15개 챕터 · 15개 워크시트 · 13개 근거 기반 사례로 구성되어 있습니다.`,
-    footerNote: `각 챕터별 실습 워크시트와 사례는 왼쪽 사이드바의 **워크시트 & 사례** 그룹에서 확인할 수 있습니다. 질문에 직접 답하고 Markdown 파일로 저장하려면 [워크시트 작성기](${BASE}ko/worksheet/)를 이용하세요.`,
+    intro: `가격전략과 Pricing Harness 실행 도구를 하나로 결합한 15개 Chapter 핸드북입니다. 15개 챕터 · 15개 워크시트로 구성되어 있습니다.`,
+    footerNote: `각 챕터별 실습 워크시트는 왼쪽 사이드바의 **워크시트** 그룹에서 확인할 수 있습니다. 질문에 직접 답하고 Markdown 파일로 저장하려면 [워크시트 작성기](${BASE}ko/worksheet/)를 이용하세요.`,
     startLink: (firstSlug) => `[CH01부터 시작하기 →](${firstSlug})`,
   },
   en: {
     title: "Pricing Strategy Handbook",
-    intro: `A 15-chapter handbook connecting pricing strategy with the Pricing Harness execution engine. 15 Chapters · 15 Worksheets · 13 Source-backed Examples.`,
-    footerNote: `Each chapter's worksheet and examples are available in the **Worksheets & Examples** sidebar group. To answer the questions and save them as a Markdown file, use the [Worksheet Writer](${BASE}en/worksheet/).`,
+    intro: `A 15-chapter handbook connecting pricing strategy with the Pricing Harness execution engine. 15 Chapters · 15 Worksheets.`,
+    footerNote: `Each chapter's worksheet is available in the **Worksheets** sidebar group. To answer the questions and save them as a Markdown file, use the [Worksheet Writer](${BASE}en/worksheet/).`,
     startLink: (firstSlug) => `[Start with CH01 →](${firstSlug})`,
   },
 };
@@ -219,7 +207,7 @@ for (const locale of LOCALES) {
 writeGenerated(
   join(OUT_ROOT, "index.md"),
   { title: "Pricing Strategy Handbook" },
-  `Pricing Strategy Handbook — v0.1.0\n\n3 Parts · 15 Chapters · 15 Worksheets · 13 Source-backed Examples\n\n- [한국어](/pricing-handbook/ko/)\n- [English](/pricing-handbook/en/)\n`
+  `Pricing Strategy Handbook — v0.1.0\n\n3 Parts · 15 Chapters · 15 Worksheets\n\n- [한국어](/pricing-handbook/ko/)\n- [English](/pricing-handbook/en/)\n`
 );
 
-console.log("[sync-content] Synced ko/en chapters, manual, examples into src/content/docs/");
+console.log("[sync-content] Synced ko/en chapters, manual into src/content/docs/");
