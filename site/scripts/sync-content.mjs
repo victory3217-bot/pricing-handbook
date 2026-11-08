@@ -126,22 +126,10 @@ for (const locale of LOCALES) {
     writeGenerated(join(OUT_ROOT, locale, "chapters", CHAPTER_DIR[ch], `${ch}.md`), fm, body);
   }
 
-  // Worksheets
-  let wOrder = 1;
+  // Worksheets: only the raw .md the Worksheet Writer reads (no doc pages, no sidebar list)
   for (const file of listDir(locale, "manual")) {
     const raw = readSource(locale, "manual", file);
     const ch = (file.match(/CH\d\d/) || [file])[0];
-    const fallback = `${ch} Worksheet`;
-    const { title, body } = extractTitle(raw, fallback);
-    const writerLink =
-      locale === "ko"
-        ? `> [워크시트 작성기에서 답변하고 Markdown으로 저장하기](${BASE}ko/worksheet/#${ch})\n\n`
-        : `> [Answer in the Worksheet Writer and save as Markdown](${BASE}en/worksheet/#${ch})\n\n`;
-    writeGenerated(
-      join(OUT_ROOT, locale, "manual", file),
-      { title, sidebar: { order: wOrder++ } },
-      writerLink + body
-    );
     mkdirSync(join(WORKSHEETS_OUT, locale), { recursive: true });
     writeFileSync(join(WORKSHEETS_OUT, locale, file), raw, "utf8");
   }
@@ -178,13 +166,13 @@ const LANDING = {
   ko: {
     title: "Pricing Strategy Handbook",
     intro: `가격전략과 Pricing Harness 실행 도구를 하나로 결합한 15개 Chapter 핸드북입니다. 15개 챕터 · 15개 워크시트로 구성되어 있습니다.`,
-    footerNote: `각 챕터별 실습 워크시트는 왼쪽 사이드바의 **워크시트** 그룹에서 확인할 수 있습니다. 질문에 직접 답하고 Markdown 파일로 저장하려면 [워크시트 작성기](${BASE}ko/worksheet/)를 이용하세요.`,
+    footerNote: `실습 워크시트는 왼쪽 사이드바의 **워크시트 작성기**에서 질문에 직접 답하고 Markdown 파일로 저장할 수 있습니다. [워크시트 작성기 열기](${BASE}ko/worksheet/)`,
     startLink: (firstSlug) => `[CH01부터 시작하기 →](${firstSlug})`,
   },
   en: {
     title: "Pricing Strategy Handbook",
     intro: `A 15-chapter handbook connecting pricing strategy with the Pricing Harness execution engine. 15 Chapters · 15 Worksheets.`,
-    footerNote: `Each chapter's worksheet is available in the **Worksheets** sidebar group. To answer the questions and save them as a Markdown file, use the [Worksheet Writer](${BASE}en/worksheet/).`,
+    footerNote: `The practical worksheets are in the **Worksheet Writer** in the sidebar on the left: answer the questions there and save them as a Markdown file. [Open the Worksheet Writer](${BASE}en/worksheet/)`,
     startLink: (firstSlug) => `[Start with CH01 →](${firstSlug})`,
   },
 };

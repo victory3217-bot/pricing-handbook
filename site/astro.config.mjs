@@ -40,9 +40,9 @@ export default defineConfig({
       sidebar: [
         ...chapterSidebar,
         {
-          label: "Worksheets",
-          translations: { ko: "워크시트" },
-          autogenerate: { directory: "manual" },
+          label: "Worksheet Writer",
+          translations: { ko: "워크시트 작성기" },
+          link: "/worksheet/",
         },
       ],
     }),
