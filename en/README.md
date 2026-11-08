@@ -77,7 +77,7 @@ flowchart LR
 
 ## Worksheets / Examples
 
-Every chapter includes one practical [worksheet](manual/) (15 total). [Examples](examples/) are included only where the source material (a Knowledge Module or a Pricing Harness CASE document) actually contains one (29 total: the original 13 plus 16 added from the Standard Lecture Plan 3-1) — no example was invented. Figures in the examples taken from the Standard Lecture Plan are practice-only hypothetical data and were verified by calculation. Each example can also be used as an exercise: first work through the "Exercise" (or "Think it through") yourself, then check it with "Show answer and walkthrough". The questions were built only from the example's own figures and wording.
+Every chapter includes one practical [worksheet](manual/) (15 total). [Examples](examples/) are included only where the source material (a Knowledge Module or a Pricing Harness CASE document) actually contains one (29 total: the original 13 plus 16 added from the Standard Lecture Plan 3-1) — no example was invented. Figures in the examples taken from the Standard Lecture Plan are practice-only hypothetical data and were verified by calculation. Each example can also be used as an exercise: first work through the "Exercise" (or "Think it through") yourself, then check it with "Show answer and walkthrough". The questions were built only from the example's own figures and wording. The examples are not published on the website; they live only in the `examples/` folder of this repository.
 
 ## Standard Lecture Plan 3-1 Enrichment
 
